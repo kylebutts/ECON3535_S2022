@@ -1,0 +1,1511 @@
+---
+title: "Unit 2: Energy Resources"
+subtitle: "Econ 3535"
+author: "Kyle Butts"
+institute: "University of Colorado: Boulder"
+date: "2020-01-03 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, metropolis-fonts, xaringan-themer.css]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(xaringanExtra)
+
+
+xaringanExtra::use_panelset()
+```
+
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_light(base_color = "#23395b", white_color = lighten_color("#23395b", strength = 0.98), link_color = "#de3f3c")
+```
+
+
+class: middle, inverse
+# Lecture 13
+
+- Energy Overview
+
+
+
+---
+## Energy vs Electricity
+
+Important distinction: electricity is a subset of the energy sector
+
+Some energy uses have electric and non-electric versions:
+  - Road vehicles, heaters, cooking stoves, lighting
+
+Some energy uses are essentially always one or the other:
+  - Electric: Computers, air conditioning
+  
+  - Non-electric: Airplanes, heat-intensive industrial processes
+
+
+---
+### US primary energy use
+Primary energy is measured in British thermal units (Btu), which allows us to compare physical units of different types and qualities of fuel. (BTU is amount of heat required to raise one pound of water by one degree F)
+
+From [eia.gov](https://www.eia.gov/energyexplained/?page=us_energy_home)
+
+- Electric power - 39%
+
+- Transportation - 29%
+
+- Industrial - 22%
+
+- Residential - 6%
+
+- Commercial - 4%
+
+The electric power sector generates most of the electricity, which is mostly used by the other sectors
+
+---
+### US energy resource mix 
+What are we using for energy? (EIA 2016)
+
+
+Natural gas (NG)- 33%
+  - Biggest single source for electricity generation, also common in residential/commercial heating and some industrial processes
+
+Petroleum- 28%
+  - 92% of the transportation sector, only about 1% of the electricity generating sector
+
+Coal- 17%
+  - Second most common source for electricity generation
+
+Renewable energy- 12%
+  - Mostly just for electricity, though other applications are emerging
+
+Nuclear- 10%
+  - Just for electricity
+
+---
+## Greenhouse gas emissions 
+
+Energy use is responsible for the vast majority of greenhouse gas that the US produces, within each of these sectors
+  - Within energy use, fossil fuel consumption creates the vast majority of GHGs
+
+Generally argued that decarbonizing the electricity sector is a huge part of the most efficient path forward
+  - Recall efficiency $\implies$ abatement from "least cost sources first" 
+  - Aviation, marine, freight, and agricultural fertilizers have no good low-carbon alternatives yet
+
+The next unit will cover climate change policy, and most of the action is in energy and electricity
+
+
+---
+class: center, middle
+
+```{r total-ghg-2020, echo=FALSE, out.width="50%", fig.align='center'}
+knitr::include_graphics("graphics/total-ghg-2020.jpg")
+```
+
+From [epa.gov](https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions)
+
+
+
+---
+class: center, middle
+
+```{r us_energy_since_1776, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("graphics/us_energy_since_1776.png")
+```
+
+
+
+
+
+---
+### Energy mix over time
+
+The energy we use changes dramatically over time
+  - So far, almost all of the changes can be explained by evolving economic costs and benefits
+
+Regulations on safety, energy security, environmental effects are more recently impactful
+  -How important? Good question.
+
+
+---
+### Energy demand
+
+Household and commercial energy demand is usually very inelastic in the short run
+
+  - *Inelastic*: change in price leads to relatively small change in quantity demanded
+  - *Short run*: sooner than it takes to make big changes (abstract, not specific)
+  
+  
+For instance, if gasoline, electricity, or NG heating prices increase, most people don’t change their behavior, or even notice
+
+  - In the long run, you can move to a more energy efficient house, install expensive upgrades, or buy a more fuel efficient car
+  
+Industrial energy demand is somewhat more elastic in the short run, mostly because energy is a more significant cost there
+  - Sometimes they even coordinate their energy demand with their electric utility
+  - Very cool idea, more in the "Demand Response" section later
+
+
+---
+### Energy demand and macroeconomics
+
+Energy demand (especially electricity) is closely tied to the health of the overall economy
+
+  - During recessions, producers cut back on energy-intensive processes
+
+    - In this sense, recessions can be good for the environment
+
+
+.center[
+
+```{r us_electricity_recession, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("graphics/us_electricity_recession.png")
+```
+
+Source: [EIA](https://www.eia.gov/workingpapers/pdf/electricity_indicator.pdf)
+
+]
+
+
+---
+### Energy supply- fossil fuel reserves
+
+Proven fossil fuel reserves = "current reserves" from the first unit
+
+Over time, we extract and process more of our endowment. However, we also discover more endowment and economic factors evolve so that it is easier to get
+For natural gas and oil, we have maintained around 50 years of reserves (at current usage rates) for a long time
+
+.center[
+
+```{r covert_greenstone_knittel_fig1, echo=FALSE, out.width="60%", fig.align='center'}
+knitr::include_graphics("graphics/covert_greenstone_knittel_fig1.png")
+```
+
+Source: [Covert, Greenstone, and Knittel (2016)](https://www.aeaweb.org/articles?id=10.1257/jep.30.1.117)
+
+]
+
+
+
+---
+### Levelized cost of energy (LCOE)
+The LCOE represents the average revenue per unit of electricity generated that would be required to recover the costs of building and operating a generating plant during an assumed financial life and duty cycle
+  - Measured in $ / MWh
+
+.center[
+
+```{r covert_greenstone_knittel_fig4, echo=FALSE, out.width="60%", fig.align='center'}
+knitr::include_graphics("graphics/covert_greenstone_knittel_fig4.png")
+```
+
+Source: [Covert, Greenstone, and Knittel (2016)](aeaweb.org/articles?id=10.1257/jep.30.1.117)
+
+]
+
+
+---
+### Energy supply- LCOE
+In the US, energy supply is primarily driven by costs and benefits, not by government decree. Best value options usually win out.
+
+Other countries have more government control. Even then, incentives for elected officials still mostly come down to user satisfaction with prices and the cost of energy provision.
+
+
+---
+### Future of Renewables
+LCOE and related measures are the best predictors of energy resource mix
+  - Generally agreed upon that renewables and emerging technologies must be able to beat other sources in the market if they are to become dominant
+  - Luckily, things may be moving in that direction fairly quickly
+
+
+```{r lcoe, echo=FALSE, out.width="60%", fig.align='center'}
+knitr::include_graphics("graphics/lcoe.png")
+```
+
+
+
+---
+## Reading for next time
+- ["Will we ever stop using fossil fuels?"](aeaweb.org/articles?id=10.1257/jep.30.1.117), pages 117-120
+
+- "Electricity" and Examples 7.5 and 7.6, pages 163-168
+
+
+---
+class: middle, inverse
+# Lecture 14
+
+Electricity Industry
+
+- How the price and quantity of electricity is determined in the short run
+
+- How the market for electricity is structured
+
+ - Who are the producers of electricity?
+
+
+---
+## Electricity Market Features - (1) Distinct Features of Electricity
+
+Electricity can not be (economically) stored 
+  - For now this is true, although battery technology is changing this
+
+*Supply = Demand at all times*
+  - Costly blackouts occur if demand and supply are not equal.
+  - Since demand varies a lot, so too does the price of electricity
+  
+  
+---
+class: center, middle
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/slDAvewWfrA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+---
+### Electricity Market Features - (1) Distinct Features of Electricity
+
+It is a homogenous good to consumers
+  - To me an electron is an electron, I can not tell where it comes from once it is on the grid
+
+It is not homogenous to the grid regulators 
+  - Regulators value flexibility, resiliency, and anything that helps balance supply and demand
+  - In the previous video how did Simon increase the Hz so quickly? Solar panels, for instance, can't just increase the sun they absorb in an instant
+
+ 
+---
+### Merit Order
+Inputs with the lowest marginal cost are dispatched first, and when demand increases, sources with higher marginal cost are dispatched
+
+.center[
+```{r eu-merit-order, echo=FALSE, out.width="80%", fig.align='center'}
+knitr::include_graphics("graphics/eu-merit-order.png")
+```
+
+[Source](https://www.goodenergy.co.uk/media/1194/wind-and-solar-reducing-consumer-bills-an-investigation-in-to-the-merit.pdf)
+]
+
+
+---
+## Electricity Market Features - (2) Economic dispatch
+
+Electricity supply must keep up with electricity demand. This is tricky because demand is hard to forecast perfectly
+
+A lot of Demand Shifters 
+  - Demand goes through daily cycles (shown next page) and seasonal cycles
+  - A wide variety of inputs are used to generate a standardized output good
+ 
+---
+class: center, middle
+.center[
+```{r pjm-economic-dispatch, echo=FALSE, out.width="60%", fig.align='center'}
+knitr::include_graphics("graphics/pjm-economic-dispatch.gif")
+```
+
+[Source](https://www.goodenergy.co.uk/media/1194/wind-and-solar-reducing-consumer-bills-an-investigation-in-to-the-merit.pdf)
+]
+
+
+---
+### The Merit Order Effect of Renewable Generation (supply shift)
+
+.pull-left[
+"The power price is determined by the "merit order" – the sequence in which power stations contribute power to the market, with the cheapest offer made by the power station with the smallest running costs setting the starting point." [Source](https://www.cleanenergywire.org/factsheets/setting-power-price-merit-order-effect)
+
+This report argues that you should count for the Merit Order savings on consumers when calculating net costs and benefits.
+]
+
+.pull-right[
+```{r meritorder_effect, echo=FALSE, out.width="200%", fig.align='center'}
+knitr::include_graphics("graphics/good-energy-2.png")
+```
+
+[Source](https://www.goodenergy.co.uk/media/1194/wind-and-solar-reducing-consumer-bills-an-investigation-in-to-the-merit.pdf)
+]
+
+
+
+---
+## Electricity Market Features – (3) Natural Monopoly
+
+
+*Monopoly*: only one seller is present in the market
+
+*Natural monopoly*: it makes sense, from a social perspective, to only have one seller in the market
+  - High fixed costs, low marginal costs $\implies$ declining average total costs
+
+  - Double the number of customers $\implies$ less than double costs
+
+  - Natural monopolies usually involve big infrastructure spending (e.g. cable, internet, phones, other utilities)
+  
+<br>
+**Natural Monopoly Problem**
+  - More efficient to avoid wasteful duplication of infrastructure
+  - However then we are subject to monopoly prices and quantities
+  
+  
+---
+class: middle, center
+
+#### Before Natural Monopoly
+
+![Before Natural Monopoly](graphics/powerlines.jpg)
+
+
+---
+### Regulated markets
+
+The original solution to the natural monopoly problem was to allow monopolies to exist, but restrict the prices they can charge
+
+*Rate of Return* regulation grants monopoly to a single generator of electricity owned by either investors or municipalities.
+  
+  - The generator is allowed total cost recovery and a profit on all *capital* investments
+  
+  - Prices charged to consumers are required around the competitive price
+  
+  - These single firms (like Xcel Energy) are vertically integrated and own the generation, transmission, and retail portions of the business
+
+![Electricity Supply Chain](graphics/vertical-integration-electricity.png)
+
+
+---
+### The Age of Deregulation
+
+People began to wonder if we could do better by promoting competition:
+
+  - *"Averch Johnson effect"*: the tendency of regulated companies to engage in excessive amounts of capital accumulation in order to expand the volume of their profits. 
+  
+  - *"gold plating"*: the phenomenon of working on a project or task past the point of diminishing returns.
+  
+  - No attempt to find lowest cost fuel
+
+
+
+---
+### Wholesale Markets
+
+By the 1990s, computers became able to support a more complicated market structure. Federal Energy Regulatory Committee (FERC) promoted wholesale markets
+  - Competition will bring down costs, stop "gold plating", integrate markets
+  
+  - *Regional Transmission Organizations* or *Independent Supply Operators* manage the grid (Transmission)
+  
+  - Utilities and Independent Power Producers compete in a a wholesale market.
+
+---
+class: center, middle
+
+#### Wholesale Market Expansion
+![Wholesale Market Expansion](graphics/wholesale_electricity_growth.gif)
+
+
+
+---
+### The Age of Deregulation 
+
+States passed policies to break up vertically integrated monopolies.
+  - Idea: only the transmission grid is a natural monopoly
+  - Forced divestiture of assets
+  - Sometimes wholesale competition 
+  - Sometimes retail competition
+
+Some success (costs do go down!) and some failures (Enron in California) 
+
+.center[
+```{r electricity_state_deregulation, echo=FALSE, out.width="55%", fig.align='center'}
+knitr::include_graphics("graphics/electricity_state_deregulation.png")
+```
+]
+
+---
+## Reading for next time
+  - "Coal", page 159 
+  
+  - "Uranium", pages 159-163
+  
+  
+
+
+---
+class: middle, inverse
+# Lecture 15
+  - Coal
+  
+  - Carbon capture and storage
+  
+  - Nuclear
+
+
+---
+## Coal use
+
+Globally, coal provides 41% of the electricity we use
+  - 33% in OECD countries and 49% in non-OECD countries
+
+  - Global coal use peaked in 2013 and has begun to decline
+
+  - Coal use in the US began to decline in the 1980s, and its share of generation has declined from about 52% $\to$ 32% since 2000
+  
+<br>
+
+Biggest factor driving the decline of coal has been competition from natural gas (NG)
+  - Recall, deregulation started in the late 1990s, and competitive markets incentivized people to build a lot of Natural Gas plants
+  - Additionally, shale gas extraction technologies led to lower NG prices
+
+
+---
+class: center, middle
+
+#### Coal in China
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n6A79YN7Kvk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+---
+### Coal- advantages 
+
+Easily storable as solid fuel
+  - Possibly more resilient source than NG in very cold weather
+
+Relatively abundant and inexpensive
+  - About 100 years of current reserves at today’s use rate
+  - Cost-competitive especially in developing countries
+
+Well-established domestic supply chain
+  - Vast majority of US supply is from the US, transported by existing railroads
+
+Coal plants already exist
+  - This is the main advantage
+  - US has basically stopped building coal plants, but existing ones compete with yet-unbuilt renewables 
+
+---
+### Coal- disadvantages
+Produces a relatively large amount of CO2
+  - Generally better than petroleum but worse than most other sources
+
+Also produces a relatively large amount of local pollutants
+  - Big disadvantage 
+  - US regulates local emissions from coal but not from NG
+
+Non-renewable
+  - For aforementioned reasons, not as important as you would think
+
+Economically significant marginal cost
+  - Obviously higher MC than renewables and nuclear, but the big one is cheap NG
+
+Slower response than natural gas
+  - NG can be dispatched more quickly than coal, so coal is less useful for grid services
+
+---
+### Can coal make a comeback?
+
+Probably not as the LCOE is too high for new development.
+
+
+---
+### Carbon capture and storage
+Coal plants with CCS are sometimes called "clean coal"
+  
+Idea: alter the production process so that CO2 never reaches the atmosphere
+  - Filter emissions, store the pollution
+
+Currently an experimental technology, not yet widely deployed
+
+Important debate in climate change economics- how much can we count on CCS?
+  - CCS complements fossil fuels, just like battery storage complements renewables
+
+Big upside- a huge breakthrough in CCS technology could make climate policy much simpler and cheaper
+
+Major downside- requires strong, long-term commitment to carbon pricing; there is virtually no incentive to invest in CCS otherwise
+
+
+---
+### Nuclear- advantages
+Very low marginal cost of operation
+  - Fuel costs and ongoing maintenance are generally lower than in fossil fuel plants
+
+Very low emissions compared to fossil fuels
+  - Electricity production process is very clean
+  
+  - Uranium mining has environmental issues, but so does all mining
+
+Relies on an essentially non-scarce resource
+  - Long-run endowment of fissile material is very large
+  
+  - Nuclear fusion technology improvements could make it even larger
+
+
+---
+### Nuclear- disadvantages
+
+Very high up-front costs
+  - Expensive to build, takes a long time from start to finish (often 10+ years)
+
+  - Big financial risk given that it takes so long to recover fixed costs
+  
+  - Many projects are abandoned before completion ($9 billion loss in SC)
+
+Consistency issues
+
+  - Typically spend ~40 days per year undergoing maintenance and refueling
+  
+  - Plants are very large, so outages require redundant capacity
+
+Low-risk, high-cost scenarios
+  - Chernobyl, Three-mile island, Fukushima, terrorism (?)
+
+Nuclear waste is costly
+  - Must be treated in a special facility for ~50 years before safe to dispose
+  
+  - Proper facilities are hard to find, e.g. [Yucca Mountain controversy](https://www.nytimes.com/2017/07/31/climate/nuclear-power-project-canceled-in-south-carolina.html)
+  
+  
+  
+---
+### Role of nuclear 
+
+Nuclear power is another very controversial technology
+
+Some, such as Bill Gates’ Breakthrough Institute, have been investing heavily in nuclear research
+
+  - Mass production of miniature reactors, lower cost, risk, and construction time
+
+  - Nuclear fusion technology
+
+Others believe this is a foolish idea, and we should decarbonize without gambling on technologies that don’t exist yet
+
+  - Most concern seems to be about cost/benefit rather than safety
+
+  - Time is running out, and nuclear takes a long time to build
+
+---
+## Reading for next time
+
+- "Natural Gas", pages 142-146
+
+- [Renewable energy - the global transition, explained in 12 charts](../Articles/Renewable energy - the global transition, explained in 12 charts.pdf) ([online version](https://www.vox.com/energy-and-environment/2019/6/18/18681591/renewable-energy-china-solar-pv-jobs))
+
+
+
+
+---
+class: middle, inverse
+# Lecture 16
+  
+  - Natural Gas
+
+
+---
+## Natural gas use
+Natural gas (NG) is the single largest source of electricity in the US (34%), and it is the second biggest source of energy overall (29%) next to petroleum 
+  - Used for electricity generation and many heating-related applications
+
+NG became much more common starting around the year 2000
+  - Shale Revolution
+  - Industry deregulation and replacement of coal
+
+
+---
+### Natural Gas History
+
+NG industry started in the same way that the electricity industry did, with regulated natural monopoly firms
+
+
+Unregulated monopolies charge artificially high prices
+  - Government forced NG producers to set lower prices
+
+1970’s - price ceiling led to shortages (diagram)
+  - Allocate the resource according to high vs low priority customers?
+  - Didn’t work out very well
+  
+
+All price controls were removed by 1993
+  - NG prices rose, so companies were willing to increase quantity supplied 
+  
+  
+---
+class: center, middle
+
+#### Price Ceiling
+
+```{r price-ceiling, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("graphics/price-ceiling.svg")
+```
+
+
+---
+### Shale revolution
+
+Technology improvements in hydraulic fracturing (fracking) and horizontal drilling expanded the current reserves of NG
+  - Supply curve shifts to the right (increases), so price of NG falls while quantity produced increases
+
+Primary reason behind the decline of coal
+
+
+<br> 
+
+Property Rights in the US were very advantageous to the Shale Revolution:
+
+  1. Private land rights in the US extend to underground resources
+
+  2. Transferability - rights to the land and rights to the underground resources can be owned separately, bought and sold
+
+<br> 
+
+Measuring environmental effects of these technologies is controversial
+
+---
+### Natural gas- advantages
+
+Relatively clean among fossil fuels
+  - Life cycle GHG emissions are about half those of coal
+
+Responsive, dispatchable resource
+  - As renewables and nuclear (essentially non-dispatchable) become more common, value of NG increases
+
+  - Very important for responding to the daily cycle of electricity demand
+
+Very cost effective in a wide range of roles
+  - Competitive with renewables for low-MC "baseload" generation
+  - Competitive with petroleum, battery storage, etc. for "peaking" generation
+
+Well-established domestic supply chain
+  - US has good NG infrastructure and promising shale gas formations
+
+
+---
+### Natural gas- disadvantages
+Harder to store emergency reserves of NG on-site
+  - Coal and nuclear can do this, renewables do it by default
+  
+Still emits plenty of CO2
+  - Most long-run forecasts suggest that we must eventually stop using fossil fuels entirely to meet even moderate climate change goals
+
+
+---
+## Reading for next time
+
+  - "Transitioning to Renewables", pages 170-176
+
+.pull-left[
+*Good news*
+
+[Renewables to Account for a Third of Global Power Generation in 2022](../Articles/Renewables to Account for a Third of Global Power Generation in 2022 | Greentech Media.pdf)
+([online version](https://www.greentechmedia.com/articles/read/iea-report-renewables-third-global-generation)).
+]
+.pull-right[
+*Bad news*
+
+[Renewables Are Expanding at an Astounding Pace. But It’s Still Not Enough to Meet Climate Goals](../Articles/Renewables Are Expanding at an Astounding Pace. But Its Still Not Enough to Meet Climate Goals | Greentech Media.pdf)
+([online version](https://www.greentechmedia.com/articles/read/renewable-energy-growth-is-still-not-enough-to-meet-climate-goals)).
+]
+
+
+
+
+---
+class: middle, inverse
+# Lecture 17
+
+  - Renewables overview
+  
+  - Wind
+
+---
+## Renewables overview
+
+IEA projects that renewables will reach 33% of global electricity production by 2022
+  - Around 23% currently
+
+Hydroelectric and geothermal power
+  - Very cost effective and reliable
+
+  - Inherently limited by geographic availability
+
+Solar and wind power
+  - Rapidly improving LCOE projections
+  
+  - Big potential for expansion
+
+Biofuels
+  - Currently we mostly use bio-waste
+
+  - Uncertain future for intentionally produced biomass
+
+---
+### Policy
+
+Renewable Portfolio Standards (RPS)
+  - States (29 states, DC and PR) set a target for renewable generation percentage by a future date
+
+  - For instance, Colorado- 30% renewable by 2020
+
+Renewable Energy Credits (RECs)
+  - One REC is given to anyone who builds 1 MW of active renewable generating capacity. 
+
+  - These can be bought or sold to comply with RPS
+
+Think of RPS as a reverse cap-and-trade system, and RECs as reverse permits
+
+
+---
+### Policy
+
+Federal Production Tax Credit
+  - Federal subsidy of about $23 per MWh for renewable generation
+
+  - Applies for first 10 years
+
+Recall the LCOE forecasts from last time
+  - Wind: ~$80 per MWh over next 5-10 years
+  - Natural Gas: ~$60 per MWh over next 5-10 years
+
+When firms decide to build more energy capacity, the PTC pushes wind to be competitive with natural gas for many places
+
+Other decision factors include
+  - Regional wind averages, natural gas prices, labor costs, availability of land, etc.
+
+---
+class: center, middle
+### Wind power overview
+
+```{r global-wind-capacity, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("graphics/global_wind_capacity.jpg")
+```
+
+[ren21 Report](https://www.ren21.net/wp-content/uploads/2019/05/gsr_2019_full_report_en.pdf)
+
+
+---
+### Wind power overview
+class: center, middle
+
+```{r wind-capacity-by-country, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("graphics/wind_capacity_by_country.png")
+```
+
+[ren21 Report](https://www.ren21.net/wp-content/uploads/2019/05/gsr_2019_full_report_en.pdf)
+
+
+
+---
+#### Wind in the US
+
+Geography is important
+  - Fossil fuels work about the same everywhere. Not all places have the same amount of wind
+
+Issues:
+  - Wind is good in sparsely populated areas of the US
+  
+    - Long-term consideration for growth of wind capacity
+  
+    - Long-range, high-voltage DC power lines are expensive and hard to build
+
+  - Seasonal variation in wind
+
+---
+class: center, middle 
+#### Wind in the US 
+
+![Wind in the US](graphics/nrel-windspeed.jpg)
+
+
+---
+### Wind power- advantages
+
+Marginal cost is close to zero
+  - Mostly just maintenance costs
+
+Emissions are essentially zero
+  - Vast majority of emissions come from fossil fuel use 
+
+  - No emissions from the use of windmills, only a little from production
+
+Up-front investment costs are consistently falling
+  - Already the cheapest option in some places like west Texas
+
+Resilient resource
+  - No supply chain to worry about
+  - Individual windmills aren’t too big to shut down
+
+Generates power at night
+  - Advantage over solar
+
+---
+### Wind power- disadvantages
+
+Intermittent generation
+  - We are good at predicting short term wind output (even better at it when lots of windmills are spaced out)
+
+  - However, random ups and downs require support from quick-response, dispatchable resources (usually NG, oil, or energy storage)
+  
+Non-dispatchable resource
+  - We cannot increase generation, but we can sort of decrease it (curtailments)
+  - Often requires excess wind capacity
+
+Negative externalities, such as wildlife damage
+  - Windmills kill 140,000 – 328,000 birds each year
+
+  - How do we value birds?
+
+
+---
+#### Negative externality of windmills
+
+Windmills can clutter the horizon, lowering the aesthetic value of nearby land
+  - Commonly cited negative externality
+
+  - Example of a NIMBY argument
+
+How important is this consideration?
+
+Recall the problem of non-constant externalities
+  
+  - Is this a diminishing externality?
+
+
+---
+## Reading for next time
+
+- Interview with NREL Researcher: [Solar power’s greatest challenge was discovered 10 years ago. It looks like a duck. ](../Articles/Solar powers greatest challenge was discovered 10 years ago. It looks like a duck - Vox.pdf) ([online version](https://www.vox.com/energy-and-environment/2018/3/20/17128478/solar-duck-curve-nrel-researcher)).
+
+
+---
+class: middle, inverse
+# Lecture 18
+  - Solar
+
+---
+class: center, middle
+
+## Solar power overview
+
+```{r global-solar-capacity, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("graphics/global_solar_capacity.jpg")
+```
+
+[ren21 Report](https://www.ren21.net/wp-content/uploads/2019/05/gsr_2019_full_report_en.pdf)
+
+---
+class: center, middle
+
+## Solar power overview
+
+```{r solar-capacity-by-country, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("graphics/solar_capacity_by_country.png")
+```
+
+[ren21 Report](https://www.ren21.net/wp-content/uploads/2019/05/gsr_2019_full_report_en.pdf)
+
+
+
+---
+### Technologies
+
+.pull-left[
+Photovoltaic cells (Solar PV)
+  - Light $\to$ electricity
+  
+  ![Solar PV](graphics/solar-pv.jpg)
+]
+
+.pull-right[
+Solar thermal energy
+  - Light $\to$ heat
+  
+![Solar Heat](graphics/solar-heat.jpg)
+]
+
+---
+class: center, middle
+#### Price of solar
+
+![Solar Price timeseries](graphics/solar-price.png)
+
+
+---
+### Solar - Advantages
+
+Most advantages are the same as wind’s
+  - Marginal cost is close to zero
+
+  - Emissions are essentially zero
+
+  - Up-front investment costs are consistently falling
+
+  - Resilient resource
+
+Solar power partially overlaps with peak demand
+  - Peak demand is usually 5pm-8pm 
+  
+  - Better in summer than in winter; longer sunlight hours and more need for AC during the sunny hours
+
+Potential for expansion is maybe even better than wind
+  - More location options- both geographically and specific fixtures
+  
+  - More power generated per unit of land area
+
+---
+### Solar - Disadvantages
+Again, most disadvantages are the same as wind’s
+
+  - Intermittent generation
+
+  - Non-dispatchable resource
+
+Daily cycle makes solar less useful
+  - No solar power at night
+  
+  - Geographic spacing of solar panels does not fix this problem
+
+Seasonal cycle makes redundancy unavoidable
+  - Must have extra winter capacity that goes unused in summer
+
+
+---
+class: center, middle
+ 
+### The Duck Cuve
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YYLzss58CLs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+---
+### The Duck Curve
+Energy grids with large amounts of solar tend to face a unique problem:
+  - The lines on the below graph show the amount of electricity needed from sources other than solar
+
+When solar power declines in the late afternoon, other sources need to ramp up quickly to meet the early-evening demand peak
+  - Natural gas is extra valuable
+
+```{r duck-curve, echo=FALSE, out.width="65%", fig.align='center'}
+knitr::include_graphics("graphics/duck-curve.png")
+```
+
+
+---
+### Household (distributed) solar
+
+Some electricity markets are very favorable towards rooftop solar
+  - Benefits home owners who are able to invest in energy cost savings, i.e. is a regressive subsidy
+  
+  - Merit is hard to compare directly with utility-scale solar farms
+
+Net metering
+  - Households can sell energy back to the grid when production > demand
+  
+  - Becomes less useful as solar generation increases - duck curve again
+
+In-home battery storage
+  - Store your excess solar power for later, go "off the grid"
+  
+  - Tesla Powerwall- $6,200 for 14kwh. Average home uses 30kwh per day
+
+
+---
+### Solar policies
+Federal: Solar Investment Tax Credit (2005)
+
+  - Can claim 30% of your solar power investment as a tax credit
+
+  - Gradually lowers the benefit over time
+
+Feed-in Tariffs (FIT)
+
+  - Sets guaranteed prices for the electricity generated 
+
+  - Lowers risk and uncertainty for solar investors
+
+  - Challenging to balance investor confidence with overall program costs
+
+*NOTE:* Tariff in this context means "negotiated price," not "import tax"
+
+
+---
+## Reading for next time
+
+  - [Energy Storage](http://energystorage.org/energy-storage/faq)
+
+  - [Demand Response](https://energy.gov/oe/activities/technology-development/grid-modernization-and-smart-grid/demand-response)
+
+
+---
+class: middle, inverse
+# Lecture 19
+
+  - Energy storage
+
+  - Demand response
+
+---
+## Energy storage
+Currently, the main value of energy storage is in ancillary services
+
+*Ancillary services*: Things that generators do to help the grid work better
+
+Examples
+  - Frequency regulation - very short term balance of supply/demand
+  
+  - Upgrade deferrals - delay the need to upgrade distribution infrastructure
+
+Hopefully, batteries will become cheap enough to play a bigger role
+  - Flattening out the "duck curve" 
+
+  - Pair with renewables to reduce intermittency problems
+
+  - Replace the highest-cost peaking generation
+
+
+---
+### Energy storage technologies
+
+**Pumped hydro storage**
+
+- Two-way water movement. About 97% of existing storage in US is pumped hydro
+
+Low demand/excess generation: uses power to pump from low to high
+
+High demand/need for generation: Water flows back down, generates power
+
+Round-trip energy efficiency of 70-80%
+
+  - Problem- this requires a specific geological structure to work at scale
+
+---
+class: center, middle
+
+#### Pumpbed Hydro Storage
+
+![Pumped Hydro](graphics/pumped-hydro.png)
+
+---
+### Energy storage technologies
+
+.pull-left[
+**Batteries**
+  - Lithium-ion, vanadium redox, flow batteries
+
+  - Currently expensive for large capacity installations, but prices are falling
+
+  ![Battery](graphics/battery-system.png)
+]
+.pull-right[
+Flywheels
+  - Kinetic energy storage
+  
+  - Very quick response, mostly used for ancillary grid services
+  
+```{r flywheel, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("graphics/flywheel.jpg")
+```
+]
+
+---
+### Energy storage technologies
+.pull-left[
+**Compressed Air Storage**
+
+Most similar to pumped hydro
+  - Some large projects use underground caverns
+  
+  - Smaller ones use tanks
+  
+```{r compressed-air-storage, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("graphics/compressed-air-storage.jpg")
+```
+]
+.pull-right[
+**Ice Energy**
+
+  - Company sells "Ice Bear" cooling units that makes ice during off-peak hours, uses it to cool buildings during the peak hours
+
+  - Neat example of a technology that makes use of energy price arbitrage
+  
+  ![Ice Bear](graphics/ice-storage.jpg)
+]
+
+---
+### Energy storage technologies
+
+**Thermal storage**
+  - Several options
+
+  - Solana generating station (pictured) uses concentrated sunlight to heat piles of salt
+  
+---
+#### Thermal Storage
+
+![Thermal Storage Solana](graphics/solana-graphic.jpg)
+
+
+---
+### Role of energy storage
+
+Primary long-challenge in this industry is getting renewables to fit 
+  - Cheap energy storage would fix a lot of these issues
+
+Places like RMI argue that "social" benefit of energy storage significantly exceeds "private" benefit
+  - Challenge is getting regulators to keep up with this stuff
+
+Need a sophisticated market-based policy for this positive externality
+  - More sophisticated than "$40/ton CO2 tax", even beyond prices and quantities
+  - Example: performance-based contracts
+
+Two main ways to help renewables fit on the grid
+  - Make supply more flexible (storage)
+  - Made demand more flexible (demand response)
+
+
+---
+### Demand response
+Random demand fluctuations and the daily demand cycle impose real costs on the system
+
+  - Supply must chase demand, and peak-use resources are expensive
+
+In some markets, the grid operator will negotiate with big electricity users (manufacturing, etc.)
+  - For instance, if you are able to reduce your energy consumption by 50% at a moment’s notice, you could get paid to do that
+
+  - PJM paid out over $5 million in one month for DR services
+
+  - Cost savings are actually greater than $5 million
+
+Lots of cost saving potential just by moving demand around (and facilitate renewables)
+
+
+---
+### Pricing
+
+.pull-left[
+Recall, for residential consumers, electricity demand is very inelastic (small response to price changes)
+
+Traditionally, utility companies charged uniform rates based on monthly averages
+  - Using another MWh of electricity costs the same for peak as non-peak
+
+Inverted-block and seasonal rate structures somewhat improve demand response
+  - Steeper supply curve
+
+Best option is probably time-of-use pricing
+]
+.pull-right[
+![Rate Structures](graphics/rate_structures_book.png)
+]
+
+
+---
+## Video for next time
+
+- [The Future of Energy Storage Beyond Lithium Ion](https://www.youtube.com/watch?v=EoTVtB-cSps)
+
+
+
+
+---
+class: middle, inverse
+# Lecture 20
+  - Hydroelectric
+
+  - Biofuels
+
+---
+## Hydroelectric power overview
+
+Relatively mature technology
+
+  - Provides 6% of electricity in the US (other renewables add to 7%)
+
+  - Some US states heavily depend on hydro power, some have almost none
+    - Washington uses hydro for more than 75%; net exporter of electricity 
+
+
+---
+class: center, middle
+
+## Hydropower overview
+
+```{r hydropower-capacity-by-country, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("graphics/hydropower_capacity_by_country.png")
+```
+
+[ren21 Report](https://www.ren21.net/wp-content/uploads/2019/05/gsr_2019_full_report_en.pdf)
+
+
+---
+### Hydroelectric power benefits
+
+Renewable source of electricity, low marginal cost of generation
+
+Price competitive without subsidies
+
+Useful for baseload generation, more consistent than wind/solar in the short run
+  - However, seasonal variation is a concern
+
+---
+class: center, middle
+
+#### Seasonal Variation
+![Seasonal Variation](graphics/renewables-seasonal.png)
+
+
+---
+### Hydroelectric power drawbacks
+Ecosystem effects
+  - Salmon populations
+
+  - Sedimentation moves downstream
+
+  - Pollution
+
+  - Tradeoff between hydro and irrigation- water scarcity
+
+
+---
+class: center, middle
+
+#### Dams and the Environment
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VipVo8zPH0U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+---
+### Hydroelectric power drawbacks
+
+Low potential for expansion
+  - High investment costs, construction times
+
+  - Significant geographic limitations- the best spots are already taken
+
+  - Similar problems to nuclear’s
+
+---
+## Biofuels
+
+First generation biofuels
+  - Direct from food crops, primarily used for automobiles
+
+  - Ethanol produced from corn or sugar cane
+
+  - Biodiesel produced from oils and fats
+
+Second generation biofuels
+  - Feed stock is not food-based, potential for use in electricity generation
+
+  - Switchgrass is directly burned as biomass
+
+  - Other types have a more complicated fuel extraction process
+
+  - Also includes municipal solid waste and waste vegetable oil
+
+---
+### Biofuel policy in the US
+
+Income tax credit (subsidy) of about $1 per gallon
+  - Also a protective tariff on imported biofuels from Brazil
+
+*2005 Energy Policy Act*
+  - Established the renewable fuel standard (RFS)
+
+  - Requires transportation fuels to become increasingly based on renewable sources
+
+  - Goal of 36 billion gallons by 2022
+
+  - Includes a maximum for ethanol and a minimum for 2nd generation biofuels
+
+*2008 Farm Bill*
+  - Subsidizes farmers who grow crops for biofuels
+
+---
+### Ethanol
+
+  - 1 mile worth of ethanol is cleaner than one mile worth of gasoline
+
+  - However, land use change is a potentially big issue
+
+  - Clearing wilderness for agricultural land changes total GHG emissions
+
+---
+### Biofuel policy in the US
+
+About 1/3 of corn grown in the US is used for ethanol
+
+Big events and policies can cause "general equilibrium effects"
+  - Economy re-organizes itself, capital and labor follow the profit
+
+Subsidizing ethanol (directly or indirectly through RFS) affects several markets
+  - Higher corn production and prices
+
+  - Higher farm income for most other crops
+
+  - Higher commodity and food prices
+
+  - Higher cost of feeding livestock (although post-ethanol grains can be recycled as feed)
+
+---
+class: center, middle
+#### The experts say…
+
+![IGM Ethanol Question](graphics/igm-ethanol.png)
+
+
+---
+### Food vs fuel
+
+Expansion of ethanol production causes two main agricultural changes
+  - Convert wild land to agricultural land
+
+  - Convert food crops to fuel crops
+
+Corn and other ethanol crops are primary inputs in food markets
+  - Supply curve for food crops shifts to the left (decreases)
+  
+  - Shift away from food crops causes food prices to rise
+
+Ethical issues, US and international
+  - Rise of ethanol caused about 70% of the increase in world food prices according to World Bank, 2008
+
+
+
+---
+## Reading for next time
+
+- "CAFE Standards" and "Alternative Fuels and Vehicles", pages 449-453
+
+
+
+---
+class: middle, inverse
+# Lecture 21
+
+  - Transportation
+
+---
+## Transportation industry
+10% of US GDP
+  - Plays a big role in facilitating the other parts of the economy
+
+  - Essentially #1 in vehicles per capita
+
+25-30% of GHG emissions in the US
+
+Several important social costs of driving
+  - Construction and maintenance
+  
+  - Pollution
+  
+  - Health cost of accidents
+
+  - Time spent in traffic
+
+
+---
+## CAFE standards
+Corporate Average Fuel Economy standards 
+  - Started in 1978 and standards become stricter over time
+
+Regulation on a manufacturer’s average fuel efficiency over the cars it sells
+  - Automakers can sell inefficient vehicles as long as they sell enough efficient ones
+
+  - Cars and trucks are separate categories
+
+Big changes to the program in 2012
+  - Installed a cap-and-trade system for excess efficiency
+  
+  - However, manufacturers can meet the new standards in some shady ways
+
+
+---
+### CAFE outcomes
+
+Imported oil fell from 47% to 27% of total oil consumption
+
+Fuel efficiency has generally increased 
+  - How much would it have changed without the policy?
+
+
+Trucks, including SUVs, became much more popular (from ~20% to ~50% of the market)
+  - Lobbying prevented Congress from raising truck standards from 1985-2004
+
+$590 million in fees paid for CAFE violations
+
+  - Almost entirely from European firms
+
+
+---
+#### CAFE vs gas tax
+
+Both policies incentivize more fuel efficient cars
+  - More miles, fewer gallons
+ 
+However, marginal cost of driving changes differently
+  - *Gas tax* - marginal cost of driving increases, so we do it less
+
+  - *CAFE* - once you own the fuel efficient car, driving becomes cheaper on the margin, so you will tend to drive more
+
+Economists tend to favor a gas tax over CAFE standards
+  
+  - Gas tax affects multiple externalities, not just gasoline use
+  
+If you want my hot take, ask me about Trucks in America
+
+
+---
+### Efficiency and emissions
+
+Holding mileage constant, more fuel efficient $\to$ use less fuel $\to$ lower emissions
+
+*Rebound effect*
+
+More efficient vehicles $\to$ driving is cheaper $\to$ drive more
+
+<br> 
+The combination of these two effects determines the change in emissions rate
+
+For drivers with a high price elasticity of demand for gasoline, a more efficient car increases gas consumption
+
+  - Somewhat lower gas cost $\to$ many more miles driven
+
+---
+### Electric vehicle subsidies
+
+Tax credits for EVs
+
+  - Federal: $2,500-$7,500 based on battery size and vehicle weight
+
+  - Colorado: up to $6,000 based on battery size and cost of the car
+
+Subsidies improve battery and drivetrain technology development
+  - Technology improvements carry on after the subsidy is over
+
+However, EV subsidies are very regressive
+  - i.e. tend to benefit wealthier people (Tesla)
+
+  - This is a very common issue with environmental programs
+
+---
+class: center, middle
+
+![EV Mileage Equivalents](graphics/ev-mileage-equivalent.png)
+
+---
+### Electric vehicles 
+
+EVs have only recently started to become more carbon efficient than hybrids and plug-in hybrids
+
+However, local emissions tend to shift away from population centers
+ 
+Really depends on how/when/where they are charged
+
+  - More charging stations are needed
+
+  - Especially in places where people park for hours during the day
+
+Vehicle-to-grid services
+  - Real potential to use EVs for battery storage
+
+---
+## Reading for next time
+
+[If Someone Replaced Your Car with a Prius, Would You Drive More?](../Articles/If Someone Replaced Your Car with a Prius, Would You Drive More?.pdf) ([online version](https://energyathaas.wordpress.com/2015/08/10/if-someone-replaced-your-car-with-a-prius-would-you-drive-more/)).

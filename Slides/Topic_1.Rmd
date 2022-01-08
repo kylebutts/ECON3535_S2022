@@ -1,0 +1,1952 @@
+---
+title: "Unit 1: Economic Fundamentals"
+subtitle: "Econ 3535"
+author: "Kyle Butts"
+institute: "University of Colorado: Boulder"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ['default']
+    self_contained: true
+nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: clear, middle
+
+```{r preamble, child=here::here("Slides", "preamble.Rmd")}
+```
+
+# Lecture 1
+
+- Intro to Class
+
+- Prisoner's Dilemma Review
+
+---
+
+
+## Reading for this class:
+
+[Robert Frank's The Darwin Economy](../Articles/Excerpts from The Darwin Economy.pdf)
+
+---
+
+## Elk Antlers and the Prisoner's Dilemma
+
+```{r, out.width="70%"}
+knitr::include_graphics("https://miro.medium.com/max/1400/1*9hFXrKToYMELDmsc5-dBDQ.jpeg")
+```
+
+
+
+---
+### Elk's Prisoner Dilemma
+
+Elk in the wild battle for females with their horn. Having larger horns gives an advantage in battling horns.
+
+Large horns hurt their ability to run away from predators though. If elks could agree, they would all prefer to cut the size of their horns in half. 
+
+
+<br>
+
+**Payoff Table:**
+
+```{r, echo=FALSE}
+tibble::tribble(
+    ~"Elk 2 / Elk 1", ~"Big Horns", ~"Small Horns",
+    "Big Horns", "(3,3)", "(8,0)",
+    "Small Horns", "(0,8)", "(5,5)"
+) %>% 
+  gt::gt() 
+```
+
+
+---
+### Elk's Incentives
+
+If Elk 2 is going to have big horns, two options: 
+  - Elk 1 has big Horns, the payoff would be 3.
+  - Elk 1 has small Horns, the payoff would be 0.
+  
+Elk 1 will choose big horns (or, natural selection chooses). We call big horns  a *dominant strategy*
+
+The same is true for Elk 2. The Nash Equilibrium is big horns. 
+
+<br>
+
+**Payoff Table:**
+
+```{r, echo=FALSE}
+tibble::tribble(
+    ~"Elk 2 / Elk 1", ~"Big Horns", ~"Small Horns",
+    "Big Horns", "(3,3)", "(8,0)",
+    "Small Horns", "(0,8)", "(5,5)"
+) %>% 
+  gt::gt() 
+```
+
+
+---
+### Terminology
+
+*Game Theory*: 
+  - The study of strategic interaction between rational decision makers
+
+*Nash Equilibrium*:
+  - A common outcome in game theory models, where incentives overlap in a way that produces a “rational” solution
+  
+*Prisoner's Dilemma*:
+  - A type of Nash equilibrium where cooperation leads to the best overall outcome, but individual incentives push away from this outcome
+
+
+---
+### Nash Equilibrum
+
+We have assumed that you have no control over the other person's choice. 
+
+Do we believe this to be true in the following games:
+  - Elk Horns?
+  
+  - Selling used car and being honest about it's condition? What about selling to your family?
+  
+  - Two restaurants choosing the price of their meals?
+
+
+
+---
+### Example for Bonus Points on Exam
+
+The game:
+
+I will pick sets of two students. There are 2 bonus points on the exam for the pair of you. 
+
+<br> 
+
+Both of you will chat me on Zoom privately whether you want to "split" or "steal" the points.
+
+  - If you both select "split", you both get 1 point.
+
+  - If 1 selects "steal" and the other "split", "steal" will get both points.
+
+  - If both select "steal", neither of you will get bonus points.
+  
+---
+
+---
+
+class: inverse, center, middle
+
+### 1 Bonus point for everyone
+
+![](graphics/the-rules-are-made-up-and-the-points-dont-matter.jpg)
+
+
+---
+##Prisoner's Dilemma in Resource Economics
+
+***Open Access Goods***:
+  - *Non-excludable* resource that can be used by anyone. 
+  - What happens to a park on a nice summer day?
+  
+***Natural Resources*** 
+  - Different from most other goods because they do not originally belong to anyone
+  
+---
+### Natural Resources Examples
+
+*Oil and gas extraction*:
+- Cooperation = responsible extraction methods
+- Defection = damaging extraction
+
+*Groundwater extraction*:
+- Cooperation = limited pumping to keep pumping costs down
+- Defection = extracting as much as possible and raising the costs for everyone
+
+*Climate change mitigation*:
+- Cooperation = adhering to international standards
+- Defection = emitting as much as is privately profitable
+
+*Fisheries and forestry*:
+  - Cooperation = sustainable harvest levels
+  - Defection = unsustainable harvest levels
+
+---
+
+class: inverse, center, middle
+
+### The point
+<hr><br>
+
+When resource users defect from the cooperative outcome, total economic value is diminished.
+
+*Even though it may be rational for all users to defect*
+
+
+---
+### Case Study: commonly owned pastures in England
+
+In the early 1800s, ranchers were allowed to openly graze on commonly owned pastures.
+
+> “Why are the cattle on a common so puny and stunted? Why is the common itself so bare-worn, and cropped so differently from the adjoining inclosures?”
+
+> William Forster Lloyd, Oxford University, 1832
+
+
+<br>
+
+Ashton (1997) credits enclosing these pastures to private allotments to helping start the industrial revolution by increasing agriculture productivity to the point where farm workers could move to industry jobs.
+
+---
+#### *Breakout Rooms:* 
+
+Using game theory, why would enclosement increase productivity?
+
+---
+##Tragedy of the Commons
+
+*The Commons*:
+
+- Any system where finite resources can be accessed and affected
+by multiple economic agents with divergent interests
+
+- Original term comes from shared grazing land in the middle of a
+town
+
+*Tragedy of the Commons*:
+
+- Open access goods are mismanaged as a result of misaligned
+private incentives
+
+Contrast this with traditional economic markets
+
+- Selfish behavior and the profit motive often lead to a socially
+optimal outcome
+
+
+
+---
+#### Solutions
+
+- Folk Theorem: expanded understanding of rationality in repeated games
+
+- Elinor Ostrom: mechanisms for commons enforcement
+
+  - Research focused on all of the ways that communities overcome the bad incentives- lots of field work
+
+  - Example: Pasture rotations and irrigation schedules monitored and enforced by the users of the commons without any government regulation
+
+- Privitzation of common goods as in the England example.
+
+
+---
+## Reading for Next Time
+
+  - "Static Efficiency", page 20
+  
+  - "Relating Optimality to Efficiency", page 50
+  
+  - "Comparing Benefits and Costs Across Time", page 52
+  
+  - "Choosing the Discount Rate", page 62
+
+
+
+
+---
+class: middle, inverse
+# Lecture 2
+
+- Economic tools for analyzing natural resource problems
+
+- Discounting and Present Value
+
+---
+### Recap
+
+- Private benefits but publicly shared costs → suboptimal economic welfare
+  - In natural resource economics, this is outcome is called “tragedy of the commons”
+  
+- Solutions to Tragedy of Commons
+  
+  - Folk Theorem (improvement from repeated interactions)
+  
+  - Horizontal enforcement (Ostrom’s research)
+  
+  - Expansion of property rights
+  
+  - Contracts
+  
+  - Laws and penalties
+
+---
+### Differences Between Traditional Economics and Natural Resources
+
+*Traditional Economics*
+
+- Static outcomes
+
+- “Static Efficiency” page 20
+
+- $MC = MB$ is usually optimal
+
+- Rational self interest leads to optimality
+
+*Natural Resource economics*
+
+- Dynamic outcomes; we use discounting and present value
+
+- $MC$ and $MB$ aren’t fair comparisons, some costs are left out
+
+- Especially external and future costs
+
+- Rational self interest often leads to tragedy of the commons
+
+
+
+
+---
+## Discounting
+
+**Discount Rate** captures the *time value of money*.
+
+- Opportunity cost associated with time (can make investments that yield returns instead).
+- Discounting rate also has a subjective component as well.
+
+<br>Why is a dollar today worth more than a dollar tomorrow?
+
+- riskless cost of capital
+
+- risk premium
+
+- pure rate of time preference
+
+
+---
+### Why use Discounting?
+
+People actually think this way, if not precisely
+
+- Banks use discounting to decide interest rates
+
+- Government agencies use it to decide on spending
+
+- People use it when making large purchases
+
+Economists don’t really have a choice to use discounting - it is present in real life
+
+- Useful concept for being explicit about *intertemporal tradeoffs* (intertemporal: across time periods)
+
+
+---
+## Present Value
+
+In words:
+
+- To calculate present value, discount future values back to today.
+
+- Capture what some future outcome (benefit or cost) is equal to in present dollars
+
+In math: 
+
+$$ 
+PV(B_t) = B_t / (1+r)^t
+$$
+
+- $t$: time-index (e.g. years). Today is $t = 0$, next year is $t = 1$, and so on.
+
+- $B_t$: amount of benefit or cost in period $t$
+
+- $r$: discount rate. Many different options for $r$ and require a choice (e.g. $r = 0.03$). 
+
+
+
+---
+### Example
+
+How much would you be willing to pay now for something worth $1000 in 5 years time.
+
+$$ 
+PV(1000) = 1000 / (1+r)^5
+$$
+
+<br>
+- $r = 0$:
+
+  - $PV(1000) = 1000/(1)^5 =$  $1000, i.e. the same because you don't discount the future. 
+  
+- $r = 0.02$: 
+
+  - $PV(1000) = 1000/(1.02)^5 =$ $905.73
+  
+- $r = 0.10$: 
+
+  - $PV(1000) = 1000/(1.04)^5 =$ $620.92
+
+
+
+---
+### Which Discount Rate to Use?
+
+*Private decisions:* market interest rates = revealed time preference
+
+*Policy decisions:* much debate! (Example 3.4)
+
+- Stern Review used 0.1-1.4% (panic, prescriptive)
+
+- Nordhaus prefers 3-6%, as does IPCC (apathy, descriptive)
+
+- US government uses 2.5%-3.5% (in between)
+
+<br>
+Lower discount rates $\implies$ more value placed on future
+
+
+---
+### Lower Discount = Better for Environment?
+
+Example where it does not: [Natural Habitat Restoration](https://darrp.noaa.gov/economics/habitat-equivalency-analysis)
+
+Polluters are often required to pay fees for damages done to natural habitats
+
+- They have to compensate the cost they caused by destroying the habitat. How much? 
+
+- They get judged based on the net present benefits of all fixes they pay for.
+
+Does lower interest rate yield more or less investments?
+
+
+---
+### Climate Change Example
+
+Let's say climate change will cost $2 trillion dollars 100 years from now (per year).
+
+How much would we invest today to avoid this this cost:
+
+$r = 0.03$: 
+
+$$2,000,000,000,000/(1.03)^{100} = 104 \text{ billion}$$
+
+$r = 0.07$:
+
+$$2,000,000,000,000/(1.07)^{100} = 2.3 \text{ billion}$$
+
+---
+### Net Present Value Stream
+
+Of course, climate change will create costs for each year, so we will add up all the present value of costs per year:
+
+$$C_1/(1 + r)^1 + C_2/(1+r)^2 + \dots + C_{100}/(1+r)^{100} + \dots$$
+This value is the willingness to pay for climate change today.
+
+<br>
+<hr>
+Two important considerations:
+
+1. What is the appropriate value of $r$?
+
+2. Since 2010, the investment cost of stopping climate change has dropped precipitously
+
+
+---
+## Economic Models
+
+> “All models are wrong, but some are useful”
+> 
+> George Box
+
+In our case, “useful” means whether or not the models give a deeper understanding of natural resources
+
+<br>
+
+Components of an Economic Model:
+
+- Motivation
+
+- Assumptions
+
+- Agents
+
+- Equilibrium
+
+
+---
+## Reading for Next Time
+
+  - "Resource Taxonomy", page 119
+  
+  - "A Two-Period Model", page 103-107
+  
+  - [Michael Greenstone's Managing Climate Risk](../Articles/What Financial Markets Can Teach Us About Managing Climate Risks.pdf) ([online version](https://www.nytimes.com/2017/04/04/upshot/what-financial-markets-can-teach-us-about-managing-climate-risks.html)).
+
+
+
+
+
+---
+class: middle, inverse
+# Lecture 3
+
+- Resource taxonomy
+
+- Recyclable resources
+
+- Two-period model with constant MC and fixed supply
+
+
+---
+## Recap
+
+Benefits and costs that happen in the future need to be compared to those that happen now
+
+- How much should we be willing to invest to avoid 1 million dollars worth of climate change?
+
+<br>
+
+**Present Value**:
+
+$$ 
+PV(B_t) = B_t / (1+r)^t
+$$
+
+- Which discount rate to use is a tough choice and requires thought.
+
+
+---
+## Discounting Summary
+
+We value things in the present more than in the future
+
+- How much more is debatable
+
+Value increases over time
+
+- Investments, technology, total wealth in society
+
+But so do costs that society incurs
+
+>"An ounce of prevention is worth a pound of cure"
+
+- Capital is scarce, and opportunities to solve problem cheaply tend to go away as the problem gets worse over time
+
+
+
+---
+## Depletable Resources
+
+**Current Reserves** (economic)
+
+- Can be profitably extracted at current prices
+
+**Potential Reserves** (economic)
+
+- Function of prices and costs
+
+**Resource Endowment** (geographic)
+
+- Total amount of resources in the ground
+
+
+---
+.center[
+### Example: Gold Mine
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/txMhW-K4xnc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+<br>
+
+- Should this mine be in the Current Reserves or the Potential Reserves?
+
+- If the price of gold dropped by 80%, should this mine be in the Current Reserves or the Potential Reserves?
+
+---
+### Recyclable Resources
+
+
+Manufacturers either buy recycled materials from processing plants, or else source new materials from elsewhere
+- Incentives to recycle change with the price of the raw material and the price of recycling material
+
+A subset of potential reserves
+- Recyclability of a material is also function of market prices
+
+If all costs are accounted for, this determines “recyclability”
+- e.g., Metals and paper are often more recyclable than glass
+
+
+---
+### Modeling Efficient Material Allocation
+
+Motivation:
+
+- Want to decide how much of the mineral is efficient to leave behind
+
+Assumptions:
+
+- Only two time periods, constant MC, simple demand function, etc.
+
+Economic agents:
+
+- Suppliers and demanders in both periods
+
+Equilibrium:
+
+- *Pareto Optimal*: nobody can be made better off without making someone else worse off
+
+- *Dynamic efficiency*: total economic surplus (value created) is maximized across time (taking into account the discount rate)
+
+
+---
+#### Mineral Example
+
+Two-Period Model: now and future
+
+Inverse Demand Curve - $P = 8 - 0.4Q$
+
+Marginal Cost -  $MC = 2$
+
+Supply is connected to the resource endowment, which is the amount that is theoretically available.
+
+- Supply matters! Is $S = 20$? $S = 30$?
+
+
+
+---
+class: center, middle
+
+```{r two_period_ex1_1, echo=FALSE, fig.cap="Unlimited Supply Example", fig.align="center"}
+knitr::include_graphics("graphics/two_period_ex1_1.png")
+```
+
+
+
+---
+## Reading for Next Time
+
+  - "A Two-Period Model", page 103-107
+
+---
+class: middle, inverse
+# Lecture 4
+
+- Mineral two-period model
+
+- Marginal user cost
+
+
+
+---
+#### Mineral Example
+
+Two-Period Model: now and future
+
+Inverse Demand Curve - $P = 8 - 0.4Q$
+
+Marginal Cost -  $MC = 2$
+
+Supply is connected to the resource endowment, which is the amount that is theoretically available.
+
+- Supply matters! Is $S = 20$? $S = 30$?
+
+
+---
+class: center, middle
+
+```{r, echo=FALSE, fig.cap="Unlimited Supply Example"}
+knitr::include_graphics("graphics/two_period_ex1_1.png")
+```
+
+
+
+
+---
+class: center, middle
+
+```{r two_period_ex1_2, echo=FALSE, fig.cap="Scarce Supply Example", fig.align="center"}
+knitr::include_graphics("graphics/two_period_ex1_2.png")
+```
+
+
+---
+### Solving the model
+ 
+- Our goal is to maximize $PV$ subject to the constraint that $Q_1 + Q_2 = Endowment$
+
+<br>
+
+When resources are scarce, greater current use diminishes future opportunities. 
+
+
+---
+## Marginal User Cost
+
+*Marginal User Cost*: 
+
+The present value of these forgone opportunities at the margin.
+
+<br> 
+- Without scarcity, producers will continue to produce until the marginal unit has net benefit of $0$. 
+
+- With scarcity, producers will produce until they run out of resources. There could be value to having another unit, this is the *Marginal User Cost*.
+
+
+---
+### Using MUC to solve model
+
+When $MUC_1 = MUC_2$, we say the solution is *dynamically efficient*. 
+
+- Total $PV(NB)$ is maximized
+
+<br>
+
+We then have to check if $Q_1 + Q_2 = Endowment$
+
+
+
+---
+## Reading for Next Time
+
+- "Efficient Intertemporal Allocations", page 123-130
+
+
+
+---
+class: middle, inverse
+# Lecture 5
+
+- Two-period model wrap up
+
+- Markets
+
+
+
+---
+class: center, middle
+
+```{r, echo=FALSE, fig.cap="Scarce Supply Example"}
+knitr::include_graphics("graphics/two_period_ex1_2.png")
+```
+
+
+---
+### Questions
+
+- Why do we put the period 2 quantities going in the opposite direction?
+
+- Why are the intercepts (6 vs. 5.45) different? 
+
+- What would happen to the intercepts if the discount rate increased? 
+
+- What does equilibrium on the vertical axis represent?
+
+
+---
+### Complicating the Model
+
+*Different demand curves across time*
+
+- Kerosene vs coal vs natural gas
+
+*Evolving marginal cost of extraction*
+
+- Bioeconomic systems 
+
+- e.g. fish supply grows more slowly if you fish more in period 1
+
+*Relationship with complements/substitutes*
+
+- Coal vs natural gas
+
+*Exploration and technology progress*
+
+- Fracking
+
+
+
+---
+## Do Mineral Markets Work?
+
+Since firms are rationally self-interested, markets work as long as:
+
+1. they discount the future the same as society does
+
+2. property rights are secure (no tragedy of the commons issues)
+
+3. all costs are considered (private costs and costs to society)
+
+
+---
+## Reading for Next Time
+
+- "Externalities as a Source of Market Failure", page 25-27
+  
+- Example 2.2 Shrimp Farming Externalities in Thailand, page 27
+
+
+
+---
+class: middle, inverse
+# Lecture 6
+
+- Efficiency
+
+- Welfare theorem
+
+- Property rights
+
+
+---
+### Macro View of Efficiency
+
+*Trade and the environment*
+
+  - Race to the bottom
+
+  - Porter Hypothesis
+
+  - Environmental Kuznets Curve
+
+*Resources and development*
+
+  - Natural resource curse
+
+  - Institutional quality
+
+
+---
+### Micro View of Efficiency
+
+*Efficient operation of markets*
+
+  - Welfare theorem
+
+  - Property rights
+
+*Inefficient operation of markets*
+
+  - Pigou and externalities
+
+  - Coase and reciprocity
+
+*Correcting inefficiencies with property rights*
+
+
+
+---
+## Efficency
+
+Economic models usually try to find the solution that will provide the best possible outcome
+
+  - From among the set of possibilities
+
+  - According to the choice of outcome that is being modeled
+
+*Examples*
+
+  - Efficient sustainable yield in a fisheries model
+
+  - Efficient harvest date for trees in a forestry model
+
+  - Efficient quantity in a supply and demand model
+
+---
+### Social Planner
+
+Economists often describe efficiency in terms of what the **social planner** would choose
+
+  - Hypothetical, all-knowing, benevolent decision maker who decides everything on behalf of the economic agents
+  
+  - This outcome contrasts with the outcome resulting from the collective action of many self-interested individuals
+
+<br>
+
+*Example* 
+
+In the two-period model with scarcity, (10.3, 9.7) was efficient
+
+However, we would expect (15, 5) is the likely outcome if self-interested users in Period 1 got to make all of the decisions
+
+
+
+---
+## First Fundamental Welfare Theorem
+
+Provides the conditions needed to be satisfied for the market to reach the same solution as the social planner. 
+
+<br>
+
+A market allocation will maximize total economic value without need for intervention ***IF*** the following conditions are met:
+  1. Property rights are well-defined
+
+  2. Buyers and sellers behave competitively by maximizing benefits and minimizing costs
+
+  3. Buyers and sellers know all prices
+
+  4. Transaction costs are zero
+
+
+---
+### Property Rights
+
+A set of legal entitlement over assets are well defined if they are:
+
+  1. Comprehensively assigned
+
+  2. Exclusive
+
+  3. Transferable
+
+  4. Secure
+
+---
+### Pigou and Externalities
+
+**Externality**: a cost or benefit imposed on outsiders who had no choice
+
+  - Can be modeled as supply or demand (or some of both)
+  
+  - Named after Arthur C. Pigou (1920)
+
+*Examples* 
+- Oil production
+
+  - Negative supply externality: oil spills
+
+  - Negative demand externality: vehicle emissions
+
+- Vaccines
+
+  - Positive demand externality: higher population resilience
+  
+  
+---
+#### Demand and Supply
+
+- Private demand/supply curves consider only value to the decision makers
+
+  - Social demand/supply curves consider society’s value
+
+  - Also called Social MB/Social MC curves
+
+  - “Society” includes decision-makers
+
+- Difference between demand curve and social MB curve is the per-unit amount of the externality
+
+
+
+---
+## Market Inefficiency
+
+When an externality is present, the First Fundamental Welfare Theorem is violated
+
+<Br>
+
+Property rights are not well-defined
+
+- Negative externality: you don’t have the right to protection from pollution
+
+- Positive externality: you don’t have the right to capture benefits of vaccination
+
+
+
+---
+### Pigouvian Tax/Subsidy
+
+Pigou proposed a corrective tax to deal with negative externalities
+
+<br>
+
+*Example*: If consumption of a gallon of gasoline causes an additional $1 of pollution, put a $1 per gallon tax on it
+
+  - Demand curve becomes identical to social MB curve
+
+  - Force market participants to internalize the externality
+
+  - Benefit: total welfare is maximized
+
+  - Drawback: some individuals may still lose
+
+    - In theory, can compensate those affected by the externality
+    
+    
+
+---
+## Reading for Next Time
+
+  - "Externalities as a Source of Market Failure", page 25-27
+  
+  - Example 2.2 Shrimp Farming Externalities in Thailand, page 27
+  
+  - "Coase Theorem", page 39-41
+
+
+---
+class: middle, inverse
+# Lecture 7
+
+- Coase theorem
+
+- Bargaining
+
+
+---
+### Recap
+
+*Externality*
+  - Additional cost or benefit to outsiders
+
+*Pigou’s solution- taxes and subsidies*
+
+  - Internalize the externality
+
+*First Fundamental Welfare Theorem*
+
+  - When private decision makers face the same incentives as a “social planner,” we get the right outcome
+  
+  
+---
+.center[
+  ### Coase Theorem
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/00HPak2RLlQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+
+---
+## Coase Theorem
+
+As long as property rights are secure and transaction costs are zero, both sides can work it out
+
+  - Social welfare is maximized, no matter who has the rights
+
+  - Ronald Coase (1960)
+
+Maximizing social welfare
+
+  - In general, it is at the quantity where social MB = social MC
+
+  - When two activities are incompatible, the one with the higher surplus should be allowed
+
+
+---
+### Coase Theorem in Reality
+
+More likely to hold true for bilateral externalities than any other kind
+
+  - Two-party negotiations are easier than 10 party negotiations
+
+  - Major point of Coase’s paper was that transaction costs are usually too high
+
+If every human was guaranteed the right to low concentrations of GHGs…
+
+  - Fossil fuel companies would have to go door to door negotiating
+
+  - Probably would result in a good environment, but also no energy at all
+  
+  
+---
+### Comparison of Solutions
+
+Suppose a rancher and a farmer operate on adjacent land. The rancher’s livestock causes some damage to the farm.
+
+*Pigouvian tax*
+
+  - Assess damage caused per animal, tax the farmer that amount per animal
+
+*Coase bargaining*
+
+  - Assign property rights, let the two sides negotiate
+  
+  
+---
+#### Example 
+
+Rancher benefits from additional cows
+
+  - $MB = 10 – 0.5Q$
+
+Farmer incurs costs from additional cows
+
+  - $MC = 0.5Q$
+
+How many cows are socially optimal?
+
+  - i.e. how many cows maximum net benefit?
+
+Let’s graph it!
+
+
+---
+
+---
+#### Scanario 1: High Transaction Costs
+
+Whoever has the property rights will enforce them and refuse to negotiate
+  - Farmer has the rights- zero cows
+
+  - Rancher has the rights- add cows until $MB = 0$
+
+    $$10 – 0.5Q = 0 \implies Q = 20 \text{ cows}$$
+
+<br>
+See the graph to understand why 10 is preferred to 0 or 20
+
+
+---
+#### Scenario 2: No Transaction Costs
+
+Coase bargaining can be effective:
+
+Farmer has the rights - negotiate a payment from the rancher for the right to graze
+
+- First cow- rancher is willing to pay up to $9.50, farmer is willing to give up the right for $0.50 or more
+
+- Second cow- rancher is willing to pay up to $9, farmer is willing to give up the right for $1 or more
+
+- …
+
+- 10th cow- rancher is willing to pay up to $5, farmer is willing to give up the right for $5 or more
+
+
+<br> 
+
+*Welfare is maximized when Coase Bargaining occurs*
+
+
+
+---
+## Reading for Next Time
+
+- [Ronald Coase and the Misuse of Economics](../Articles/Ronald Coase and the Misuse of Economics.pdf) ([online version](https://www.newyorker.com/news/john-cassidy/ronald-coase-and-the-misuse-of-economics)).
+
+- "The Command-and-Control Policy Framework", page 397-404
+
+
+---
+class: middle, inverse
+# Lecture 8
+
+- Policy tools
+
+- Local pollutants
+
+
+
+
+---
+## The Big 3: Policy Tools
+
+**Command and control**
+
+  - Standards, technology mandates, quotas, etc.
+
+**Taxes (market-based)**
+
+  - Pricing externalities
+
+**Cap and trade (market-based)**
+
+  - Issue permits, allow for trading
+
+
+---
+### Efficiency of Policy
+
+Assuming we have a clear goal in mind, e.g. emissions
+  - *efficiency* is hitting that goal as cheaply as possible
+
+**Marginal abatement cost**
+
+  - The cost associated with eliminating the next amount of pollution
+
+  - Different sources have different MAC curves
+
+<br>
+
+Efficiency means that abatement comes from sources where it is easiest/cheapest to abate
+
+
+---
+### Marginal Abatement Cost
+
+MAC is usually increasing in the level of abatement
+
+  - Unconstrained pollution costs nothing to the firm
+
+  - First unit of abatement is fairly easy
+
+  - For most firms, reducing emissions to zero requires shutting down completely
+
+MAC generally comes from one of two abatement methods (whichever is cheaper)
+
+  - Opportunity cost of lowering output
+
+  - Direct cost of making the production process cleaner
+
+
+
+---
+### Local Air Pollutants
+
+Important setting where all three major policy tools are used
+
+Local air quality has some of the familiar open-access problems, but not others
+
+  - Not hard to measure responsibility for most of it
+
+“Local” means that the emission source matters
+
+  - *e.g.* SO2, NOx, fine particulate matter, etc.
+
+  - Important non-local emissions include ozone-depleting chemicals and greenhouse gases
+
+
+---
+### National Ambient Air Quality Standar (NAAQS)
+
+Established in the Clean Air Act of 1990, NAAQS sets standards for state and local regulators on six pollutants
+
+  - Carbon Monoxide, Lead, Nitrogen Oxides, Ozone, Particulate Matter, Sulfur Dioxide
+
+States can choose which policy tools to use
+
+
+---
+
+<table style="font-size: 12px">
+<thead>
+  <tr><th colspan="2">Pollutant<br>
+				[links to historical tables of NAAQS reviews]</th>
+			<th>Primary/<br>
+				Secondary</th>
+			<th>Averaging Time</th>
+			<th>Level</th>
+			<th>Form</th>
+		</tr>
+</thead>
+<tbody>
+  <tr>
+      <td colspan="2" rowspan="2"><a href="/co-pollution/table-historical-carbon-monoxide-co-national-ambient-air-quality-standards-naaqs">Carbon Monoxide (CO)</a></td>
+			<td rowspan="2">primary</td>
+			<td>8 hours</td>
+			<td>9 ppm</td>
+			<td rowspan="2">Not to be exceeded more than once per year</td>
+		</tr>
+	<tr>
+	    <td>1 hour</td>
+			<td>35 ppm</td>
+	</tr>
+	<tr>
+	    <td class="blue" colspan="2"><a href="/lead-air-pollution/table-historical-lead-pb-national-ambient-air-quality-standards-naaqs">Lead (Pb)</a></td>
+			<td class="blue">primary and<br>
+				secondary</td>
+			<td class="blue">Rolling 3 month average</td>
+			<td class="blue">0.15&nbsp;μg/m<sup>3</sup>&nbsp;<sup><a href="#1">(1)</a></sup></td>
+			<td class="blue">Not to be exceeded</td>
+	</tr>
+	<tr>
+	    <td colspan="2" rowspan="2"><a href="/no2-pollution/table-historical-nitrogen-dioxide-national-ambient-air-quality-standards-naaqs">Nitrogen Dioxide (NO<sub>2</sub>)</a></td>
+			<td>primary</td>
+			<td>1 hour</td>
+			<td>100 ppb</td>
+			<td>98th percentile of 1-hour daily maximum concentrations, averaged over 3 years</td>
+	</tr>
+	<tr>
+      <td>primary and<br> secondary</td>
+			<td>1 year</td>
+			<td>53 ppb <sup><a href="#2">(2)</a></sup></td>
+			<td>Annual Mean</td>
+	</tr>
+	<tr>
+	     <td class="blue" colspan="2"><a href="/ground-level-ozone-pollution/table-historical-ozone-national-ambient-air-quality-standards-naaqs">Ozone (O<sub>3</sub>)</a></td>
+			<td class="blue">primary and<br>
+				secondary</td>
+			<td class="blue">8 hours</td>
+			<td class="blue">0.070 ppm&nbsp;<sup><a href="#3">(3)</a></sup></td>
+			<td class="blue">Annual fourth-highest daily maximum 8-hour concentration, averaged over 3 years</td>
+	</tr>
+	<tr>
+	    <td rowspan="4"><a href="/pm-pollution/table-historical-particulate-matter-pm-national-ambient-air-quality-standards-naaqs">Particle Pollution (PM)</a></td>
+			<td rowspan="3">PM<sub>2.5</sub></td>
+			<td>primary</td>
+			<td>1 year</td>
+			<td>12.0 μg/m<sup>3</sup></td>
+			<td>annual mean, averaged over 3 years</td>
+	</tr>
+	<tr>
+	    <td>secondary</td>
+			<td>1 year</td>
+			<td>15.0 μg/m<sup>3</sup></td>
+			<td>annual mean, averaged over 3 years</td>
+	</tr>
+	<tr>
+	   <td>primary and<br> secondary</td>
+			<td>24 hours</td>
+			<td>35 μg/m<sup>3</sup></td>
+			<td>98th percentile, averaged over 3 years</td>
+	</tr>
+	<tr>
+	    <td>PM<sub>10</sub></td>
+			<td>primary and<br>
+				secondary</td>
+			<td>24 hours</td>
+			<td>150 μg/m<sup>3</sup></td>
+			<td>Not to be exceeded more than once per year on average over 3 years</td>
+	</tr>
+  <tr>
+      <td class="blue" colspan="2" rowspan="2"><a href="/so2-pollution/table-historical-sulfur-dioxide-national-ambient-air-quality-standards-naaqs">Sulfur Dioxide (SO<sub>2</sub>)</a></td>
+			<td class="blue">primary</td>
+			<td class="blue">1 hour</td>
+			<td class="blue">75 ppb <sup><a href="#4">(4)</a></sup></td>
+			<td class="blue">99th percentile of 1-hour daily maximum concentrations, averaged over 3 years</td>
+	</tr>
+	    <tr><td class="blue">secondary</td>
+			<td class="blue">3 hours</td>
+			<td class="blue">0.5 ppm</td>
+			<td class="blue">Not to be exceeded more than once per year</td>
+	</tr>
+</tbody>
+</table>
+*Source: [epa.gov](https://www.epa.gov/criteria-air-pollutants/naaqs-table)*
+
+
+
+---
+#### Command and Control Policies
+
+Emissions standards
+  - Assign each polluting firm a level of pollution they are allowed to reach
+
+  - Penalize for infractions
+
+Issues
+
+  - May prevent high-value production from Firm A (allowance too small)
+
+  - May allow low-value pollution from Firm B (allowance too large)
+
+
+---
+#### Command and Control Policies
+
+Production/technology standards
+
+  - Force all polluting firms to adopt a particular technology or production practice
+
+  - Alternatively, ban particularly bad practices
+
+Issues
+
+  - Firms may find it less costly to reduce emissions by some other means
+
+  - Policy will only be effective to the extent that it mandates the least-cost method of abatement
+
+
+---
+#### Corrective (Pigouvian) Taxes
+
+Set a per-unit tax on firm-level emissions
+
+  - Increase the $MC$ of production, results in lower equilibrium $Q$
+
+  - Firms still incentivized to maximize profits through optimal production and innovation
+
+Issues
+
+  - Sometimes hard to accurately determine correct tax
+
+  - Does not act as an emergency backstop
+  
+  
+---
+#### Cap and Trade
+
+Set a maximum level of pollution allowed within a region
+
+  - Issue permits that add up to that level, allow firms to buy/sell
+
+  - Firms that can cheaply reduce pollution can sell permits to those who cannot
+
+Issues
+
+  - Sometimes hard to choose an optimal level of allowable pollution
+
+  - Initial permit allocations are often controversial
+
+  - But they don’t matter for efficiency- Coase Theorem applies!
+
+
+
+---
+## Reading for Next Time
+
+  - "Command and control vs market-based policies", page 397-411
+
+
+
+
+
+---
+class: middle, inverse
+# Lecture 9
+
+- Policy comparisons
+
+- Numerical example
+
+
+---
+### Recap
+
+Marginal abatement cost
+
+- Costs faced by a firm of reducing emissions by one more unit
+
+Efficiency requires reducing emissions from the cheapest sources
+
+Cap and Trade and Corrective Taxes both lead to the efficient outcome
+
+- However, the information available to policy makers often means one is preferable to the other
+
+
+
+
+---
+#### Example
+
+Suppose there are two firms and the government wants to reduce emissions by 15 units (from $40 \to 25$)
+
+*Option 1: Command and Control*
+
+  - Choose an abatement amount for each of the two firms, adds up to 15
+
+*Option 2: Tax*
+
+  - Choose a per-unit tax on emissions that incentivizes the two firms to reduce by 15
+  - Requires knowledge of the full marginal abatement cost curve.
+
+
+*Option 3: Cap and trade*
+
+  - Issue 25 permits, allow firms to trade as desired
+
+
+---
+class: center, middle
+
+```{r emission_tax_ex1, echo=FALSE, fig.cap="Emission Tax Example", fig.align="center"}
+knitr::include_graphics("graphics/emission_tax_ex1.png")
+```
+  
+---
+class: center, middle
+
+```{r credit_trading_ex1, echo=FALSE, fig.cap="Emission Trading Example", fig.align="center"}
+knitr::include_graphics("graphics/credit_trading_ex1.png")
+```
+
+
+---
+#### Efficiency in the above example
+
+Efficiency is achieved where the MAC curves cross
+
+  - Firm 1 reduces by 10, Firm 2 reduces by 5
+
+  - If regulation forced it to be (9,6) we would still have 15 units of abatement but at greater total cost to society
+
+<br>
+
+A command and control quota will only be efficient if it happens to be exactly (10,5)
+
+
+
+---
+#### Efficiency of Cap and Trade Policy
+
+Suppose the initial allocation of permits cover all but 9 units of Firm 1’s pollution, and all but 6 units of Firm 2’s pollution
+
+  - Firm 2 is willing to pay up to the MAC of the 6th unit for another permit
+
+  - Firm 1 is willing to sell a permit for as little as the MAC of its 10th unit
+
+<br>
+
+Permit price will be very close to the MAC intersection (gets closer as number of firms increases because of declining market power)
+
+
+---
+#### Efficiency of Corrective Tax
+
+Optimal corrective tax will be where the two MAC curves intersect
+
+  - Solution was: F1 abates 10, F2 abates 5
+
+<br> 
+
+Logic behind F1’s decision to abate 10 units
+
+  - 1st unit’s MAC < tax $\implies$ abate this unit
+
+  - 2nd unit’s MAC < tax $\implies$ abate this unit too
+
+  - …
+
+  - 10th unit’s MAC = tax $\implies$ indifferent either way
+
+  - 11th unit’s MAC > tax $\implies$ pay the tax instead of abating
+
+
+---
+#### Equivalence of the Two Policies
+
+Under the assumption of perfect information…
+
+The optimal tax leading to X units of abatement is the equal to the trading price of permits that allow all but X units of pollution
+
+  - Cap and trade sets the quantity, taxes set the price
+
+Under both systems, we expect the efficient outcome to occur
+
+  - However, perfect information is a very strong assumption, unlikely to hold in reality. 
+  
+  - How would the government know the marginal abatement cost curves of the firms? The firms have no incentive to tell the truth to the government.
+  
+  
+---
+#### Differences 
+
+**Government revenue**
+
+Suppose that both firms start out polluting 20 units:
+
+*Tax*
+
+  - Pay the tax rate on every unit they do not abate
+  
+  - Firm 1 pays tax on 20-10 = 10 units
+
+  - Firm 2 pays tax on 20-5 = 15 units
+
+*Cap and Trade*
+
+  - Only pay for additional permits beyond the ones provided by government
+
+  - Firm who sells permits can actually make money from the policy
+
+  - Government can auction permits instead of giving them out for free; can generate some revenue but hard to compare directly with the tax revenue
+
+
+
+---
+class: middle, inverse
+# Lecture 10
+
+- Policies Continued
+
+- Numerical Exercise
+
+
+---
+### Recap
+
+Marginal abatement cost
+
+  - Costs faced by a firm of reducing emissions by one more unit
+
+Efficiency requires reducing emissions from the cheapest sources
+
+Cap and Trade and Corrective Taxes both lead to the efficient outcome
+
+  - However, the information available to policy makers often means one can be preferable to the other
+
+---
+## Cap and Trade Model
+
+Government wants to lower sulfur dioxide emissions from the electric power sector, and they have two options:
+
+1. Uniform emissions standard
+
+  - All firms are forced to reduce emissions by a certain amount
+
+2. Cap and trade system
+  
+  - Hand out permits, allow firms to trade
+
+*Assumptions*
+
+  - Two firms with different MAC curves
+
+  - Firms abate emissions by spending money on pollution control equipment, not by cutting output (simplifying)
+
+---
+### Problem Set up
+
+Price of electricity: $100/MWh and both companies supply 1 MWh.
+
+Baseline Emissions: $13$ lbs. $SO_2$ per MWh.
+
+Profit functions are:
+
+$$\pi_x = 100 - 1/2 a_x^2$$
+
+$$\pi_y = 100 - a_y^2$$
+
+where $a_x$ and $a_y$ are the amount of emissions abated (lbs. $SO_2$).
+
+Therefore the marginal cost of abatement are:
+
+$$MAC_x = a_x \text{ and } MAC_y = 2a_y$$
+
+<br>
+Emission Goal: 
+14 lbs. Remaining
+12 lbs. Abated
+
+
+---
+#### Questions
+
+For 1. a uniform standard, and 2. a tradable permit system, find:
+
+  - Abatement of each firm
+
+  - Total costs and profit for each firm
+
+  - Industry profit and total emissions
+
+<br> 
+
+How does the efficiency of the two policies compare?
+
+  - Efficient policy will maximize profit while meeting the emissions target
+
+---
+
+
+---
+#### Command and Control in Practice
+
+Economists often argue against command and control policies, especially when affected firms have heterogeneous cost structures
+
+  - Fines tend to be too small relative to the cost of compliance
+
+  - Incentive to cheat
+
+
+---
+#### Benefits of Command and Control
+
+Emergency backstop
+
+  - When we know for sure that benefits don’t justify a certain level of pollution, a pollution quota doesn’t risk inefficiency
+
+  - Additional quota mandating each firm to stay below 20 lbs of pollution will not hurt anything
+
+Simple minimum standards
+
+  - Banning lead-based paint, for instance
+
+  - Phasing out incandescent bulbs?
+
+Regional standards (as in NAAQS)
+
+  - Distributes regulatory burden to a lower level than federal
+  
+  
+---
+## Videos for Next Class
+
+  - [Taxes and Deadweight Loss](https://www.youtube.com/watch?v=NuLlNAdrom4)
+
+  - [Pigouvian Taxes](https://www.youtube.com/watch?v=UYShebe44Xs)
+
+
+
+---
+class: middle, inverse
+# Lecture 11
+
+- Taxes and Deadweight Loss
+
+- Corrective Taxes and Subsidies
+
+
+---
+## Taxes
+
+We saw before how a tax relates to a two-firm cap and trade model
+
+A different way to think about tax is with the supply and demand model
+
+  - Often, there are more than two firms producing an externality
+
+  - Also, sometimes the demand side produces externalities
+
+Any number of firms can be combined into a supply curve
+
+  - The supply curve expresses the number of units the whole market is willing to supply at each price
+
+  - Same idea for consumers and the demand curve
+
+
+---
+### Corrective taxes
+
+Tax a market if…
+
+  - Social marginal benefit < private marginal benefit, OR
+
+  - Social marginal cost > private marginal cost
+
+A tax/subsidy on one side of the market shifts the corresponding curve to the left or right
+
+  - Key is to think about effect on incentives
+
+
+<br>
+
+Taxes reduce the quantity of the good bought/sold in the market
+
+  - The tax “corrects” incentives that led to too much of the good
+
+Subsidies increase the quantity of the good bought/sold in the market
+
+
+---
+#### Example
+
+Tax on supply $\implies$ firms marginal cost increases (supply curve move up)
+
+Tax on demand $\implies$ consumers willing to pay (after the tax) decreases (demand curve shifts down)
+
+
+
+
+
+
+
+
+---
+### Deadweight Loss
+
+Deadweight loss (DWL) is what we call lost potential economic surplus
+
+*Always a comparison of two alternative scenarios*
+
+  - DWL = (old surplus) – (new surplus)
+
+<br>
+Example: DWL from a tax on movie tickets. 
+
+50% tax on movie tickets $\implies$ I will go to the movies less
+
+  - Producer surplus: theater loses surplus in the form of profits
+
+  - Consumer surplus: I lose surplus because I am no longer buying something that was more valuable to me than the firm's cost
+
+  - Government revenue: government gains revenue from the tax
+
+$$DWL = PS + CS - GR$$
+
+
+---
+### Deadeweight Loss Visualized
+
+.pull-left[Before Tax]
+.pull-right[After Tax]
+
+
+
+---
+## Taxes and Externalities
+Regular markets do not generate externalities
+
+  - Movie ticket sales don’t really affect non-participants
+
+Taxes in regular markets cause DWL because Q is *inefficiently low* after 
+  - There would be greater total surplus if the tax were removed
+
+In markets with a negative externality (and without a corrective tax), there is DWL because Q is inefficiently high
+  - There would be greater total surplus if the decision makers considered all costs to society, not just their own
+
+
+
+---
+### Supply-Side Externality and Deadweight Loss
+
+.pull-left[Before Tax]
+.pull-right[After Tax]
+
+
+---
+### Pigovian Tax
+
+Pigou’s idea: 
+  - Negative externality can be fixed by an equally sized corrective tax
+
+If the tax is chosen correctly, it will shift the demand curve so that it is the same as the social marginal benefit curve (or supply/ social marginal cost)
+
+*The punchline*
+  - We wish people made decisions like the social planner would
+  
+  - Taxes and subsidies can make up the difference
+
+
+---
+## Reading for Next Time
+
+  - "Trade and the Environment", page 545-549
+  
+  - Example 20.2 The Natural Resource Curse
+  
+  - [Carbon Taxes Won't Do Enough to Slow Global Warming](../Articles/Carbon Taxes Wont Do Enough to Slow Global Warming.pdf) ([online version](https://www.bloombergquint.com/business/2019/09/25/carbon-taxes-won-t-do-enough-to-slow-global-warming)).
+
+
+
+
+---
+class: middle, inverse
+# Lecture 12
+
+- Growth and Development
+
+- Trade 
+
+
+---
+# Midterm
+48% multiple choice (12 questions)
+Based on everything
+
+52% math/short answer
+Based on the models covered in the math assignment
+Be neat, show your work, partial credit is available
+
+50 minutes long
+
+You may bring a “cheat sheet” on a single note card 
+
+---
+### Midterm test advice
+
+I care about concepts more than situation-specific details
+
+Good question: Is the two-period mineral extraction model an example of the prisoner’s dilemma? Why or why not?
+Bad question: Which six pollutants are covered under the NAAQS?
+
+Cheat sheet
+In my experience, 90% of the value of a cheat sheet comes from making it
+Personally, I would put theorems and math examples on it, along with concepts I might accidentally mix up with others 
+
+
+
+---
+## International trade
+
+.pull-left[
+
+Near-universal agreement from top economists that free trade creates economic value
+
+“If that's not right, almost all of economics is wrong.”
+
+\- Richard Schmalensee, in response to this question
+
+]
+
+.pull-right[
+
+```{r free_trade_q, echo=FALSE, fig.cap="Free Trade Question", fig.align='center'}
+knitr::include_graphics("graphics/free_trade_q.png")
+```
+
+]
+
+---
+### Race to the Bottom - Pollution havens
+  - Theory that countries will lower their environmental standards to stay competitive with countries that are willing to pollute
+  - Prisoner’s dilemma again!
+
+Little evidence this has been happening; still a concern for future policies
+  - Environment is becoming more fragile
+
+---
+### Porter Hypothesis
+Firms in countries with strict environmental standards may have a long-run advantage
+
+  - *Induced innovation* - technology improvements that result from regulations
+
+If this hypothesis is true, trade may cause the opposite of the “race to the bottom”
+
+  - Some empirical support, but definitely controversial still
+
+  - Might explain lack of support for the race to the bottom theory
+
+
+---
+### Environmental Kuznets Curve
+
+Observed relationship between national income levels and environmental quality measures
+  
+```{r kuznets_curve, echo=FALSE, fig.cap="Kuznets Curve", out.width="50%", fig.align='center'}
+knitr::include_graphics("graphics/kuznets_curve.png")
+```
+
+
+---
+### Environmental Kuznets Curve
+
+Implications for trade
+  - If trade makes countries wealthier, maybe makes environment worse
+  - *Example:* China ($7,000 GDP per capita) exports manufactured goods to the US ($53,000 GDP per capita), resulting in poor air quality in many Chinese cities
+  - When does a nation start trading off economic growth for environmental quality?
+
+
+---
+### Resource Curse
+
+Natural resources are a valuable component of a nation’s economy
+
+However, countries with abundant resource endowments seem to do worse
+  - Slower economic growth
+  - More authoritarian governments
+  - Currency problems
+
+
+---
+#### Resources and government
+Natural resources are an easy source of revenue
+  - Little pressure on governments to be accountable
+  - Well-connected individuals preserve the status quo
+  - Military regimes can support themselves through conquest
+
+> “There are twenty-three countries in the world that derive at least 60 percent of their exports from oil and gas and not a single one is a real democracy"
+> 
+> - Larry Diamond
+
+---
+#### Evidence
+> “Economies with a high ratio of natural resource exports to GDP… tended to have low growth rates during the subsequent period”
+> 
+> - Warner and Sachs (1995)
+
+> “More natural resources push aggregate income down when institutions are grabber friendly”
+> “More resources raise income when institutions are producer friendly”
+> 
+> -Mehlum et al. (2006)
+
+
+---
+#### Institutional quality
+
+Mehlum et al. (2006) describe “institutional quality” as an average of five indices 
+
+1. Rule of law index 
+2. Bureaucratic quality index 
+3. Corruption in government index
+4. Risk of expropriation index
+5. Government repudiation of contracts index
+
+When economists say that “institutions matter,” this is what they mean
+
