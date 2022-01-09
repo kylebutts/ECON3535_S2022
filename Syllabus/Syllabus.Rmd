@@ -1,0 +1,344 @@
+---
+title: "Syllabus"
+subtitle: "ECON 3818: Introduction to Statistics"
+author: "Kyle Butts"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  xaringan::moon_reader:
+    css: ['default']
+    ## No title slide
+    seal: false
+    self_contained: true
+    nature:
+      ratio: '8.5:11'
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r preamble, child=here::here("document-preamble.Rmd")}
+```
+
+```{r, echo = F}
+library(icons)
+library(tidyverse)
+library(gt)
+```
+
+<h1 class="hi text-2xl center coral">ECON 3535: Nautural Resource Economics</h1>
+
+This course in natural resource economics will introduce students to the relationship between natural resources and the economic system. Classic allocation problems for renewable and nonrenewable resources will be examined. Understanding the incentives faced by users of natural resources will allow us to consider market failures and the important question of whether or not market interventions are justified on economic grounds. Because natural resources play a central role in many current energy and environmental policy debates, this course will also address institutions and policy issues related to climate change, ecosystem services, renewable energy, transportation, and sustainability.
+
+The aim of this course is to teach you to be able to think about **incentives** and **trade-offs** like an economist.
+
+## Course Info
+
+<div style="min-height: 2rem;"></div>
+
+```{r info-table, echo = F}
+table <- tribble(
+  ~Icon, ~Name, ~Time, ~Location,
+  as.character(icons::fontawesome("chalkboard-teacher")), "Instructor", "Kyle Butts", "<a href = 'emailto:kyle.butts@colorado.edu'>kyle.butts@colorado.edu</a>",
+  as.character(icons::fontawesome("school")), "Lecture", "MWF 12:20-1:10pm", "Humanities 135",
+  as.character(icons::fontawesome("laptop-house")), "Office Hours", "TBD", "<a href = 'https://cuboulder.zoom.us/s/3975335005'>Zoom</a>",
+  as.character(icons::fontawesome("chalkboard-teacher")), "TA", "TBD", "<a href = 'emailto:tbd@colorado.edu'>tbd@colorado.edu</a>",
+  as.character(icons::fontawesome("laptop-house")), "Office Hours", "TBD", "<a href = '#'>Zoom</a>",
+  as.character(icons::fontawesome("book")), "Textbook", "The Basic Practice of Statistics 11e. <br/> David Moore, William Notz, <br/> and Michael A Fligner.", "",
+)
+
+table %>%
+  mutate(
+    Icon = map(Icon, gt::html),
+    Location = map(Location, gt::html),
+    Time = map(Time, gt::html),
+    Name = paste0("<i>", Name, "</i>"),
+    Name = map(Name, gt::html)
+  ) %>%
+  gt::gt(table) %>%
+  gt::cols_label(Icon = "") %>%
+  gt::cols_width(
+    Icon ~ px(40)
+  ) %>%
+  gt::cols_align(columns = c(Name, Time, Location), align = "left") %>%
+  gt::tab_options(
+    data_row.padding = px(4),
+    column_labels.hidden = TRUE,
+    table.font.size = px(10)
+  )
+```
+
+
+
+---
+
+## Grading
+
+<div style="min-height: 2rem;"></div>
+
+```{r grading-summary, echo = F}
+grades <- tribble(
+  ~Assignment, ~Percentage, ~Blank, ~Assignment2, ~Percentage2,
+  "<b>Homework</b>", .1, "", "<b>Midterm 1</b>", .2,
+  "<b>R Problem Sets</b>", .15, "", "<b>Midterm 2</b>", .2,
+  "<b>R Project</b>", .15, "", "<b>Final</b>", .2
+) %>%
+  mutate(
+    Assignment = map(Assignment, gt::html),
+    Assignment2 = map(Assignment2, gt::html)
+  )
+
+gt(grades) %>%
+  fmt_percent(columns = c("Percentage", "Percentage2"), decimals = 0) %>%
+  gt::cols_width(
+    Assignment ~ px(100),
+    Assignment2 ~ px(100),
+    Percentage ~ px(80),
+    Percentage2 ~ px(70),
+    Blank ~ px(20)
+  ) %>%
+  gt::cols_align(align = "left") %>%
+  # Border right
+  gt::tab_style(
+    style = list(cell_borders(
+      sides = c("left"),
+      color = "#D3D3D3",
+      weight = px(2)
+    )),
+    locations = list(cells_body(columns = Blank))
+  ) %>%
+  gt::tab_options(
+    data_row.padding = px(2),
+    table.font.size = px(10),
+    column_labels.hidden = TRUE,
+    column_labels.border.bottom.width = px(1)
+  )
+```
+
+<div style="min-height: 2rem;"></div>
+
+
+We will have two midterms, but I will only count the higher grade of the two. The final exam will be cumulative, but more more heavily weighted towards the most recent material.
+
+I will curve each midterm separately. After the final exam I will curve the final grades so that the average grade for the whole class is an 81 (B-). The curve follows a strict formula, and I will not manually adjust grades for any reason. Letter grades are assigned according to the standard numerical formula used at CU:
+
+
+<div style="min-height: 2rem;"></div>
+
+```{r letter-grades, echo = F}
+grades <- tribble(
+  ~Grade, ~Percentage, ~Blank, ~Grade2, ~Percentage2,
+			"A ", "\\(93 \\leq x\\)",      "", "C", "\\(73 \\leq x < 77\\)",
+			"A-", "\\(90 \\leq x < 93\\)", "", "C-", "\\(70 \\leq x < 73\\)",
+			"B+", "\\(87 \\leq x < 90\\)", "", "D+", "\\(67 \\leq x < 70\\)",
+			"B ", "\\(83 \\leq x < 87\\)", "", "D ", "\\(63 \\leq x < 67\\)",
+			"B-", "\\(80 \\leq x < 83\\)", "", "D-", "\\(60 \\leq x < 63\\)",
+			"C+", "\\(77 \\leq x < 80\\)", "", "F ", "\\(x < 60\\)",        
+)
+
+gt(grades) %>%
+  gt::cols_width(
+    Grade ~ px(30),
+    Grade2 ~ px(30),
+    Percentage ~ px(80),
+    Percentage2 ~ px(70),
+    Blank ~ px(20)
+  ) %>%
+  gt::cols_align(align = "left") %>%
+  # Border right
+  gt::tab_style(
+    style = list(cell_borders(
+      sides = c("left"),
+      color = "#D3D3D3",
+      weight = px(2)
+    )),
+    locations = list(cells_body(columns = Blank))
+  ) %>%
+  gt::tab_options(
+    data_row.padding = px(2),
+    table.font.size = px(10),
+    column_labels.hidden = TRUE,
+    column_labels.border.bottom.width = px(1)
+  )
+```
+<div style="min-height: 2rem;"></div>
+
+
+### Assignments
+
+There will be one math assignment and one writing assignment. The math assignment will involve using economic models to solve problems related to natural resource allocation. These will be graded for correctness, and you may work alone or in groups of 2. Each group will turn in a single assignment on Canvas and include your partner's name so you both receive a grade.
+
+The written assignment will ask you to chose a policy of interest and present to a imaginary policy maker using economic concepts that we discuss in the course. This will require you to discuss the trade-offs that may occur and any potential effects (good and/or bad!) of the incentives created by the policy. Literature reviews will be graded based on effort and meeting the guidelines.
+
+---
+
+## Course Policies
+
+<br/>
+
+### Attendance
+
+I will not be taking attendance, so skip class at your own risk. Lecture slides will be posted on Canvas. The slides are a valuable study tool for the exams, but it will be hard to do well without regular attendance.
+
+### Makeups
+
+There will be no makeup tests, even if your reason for missing the test is very good. If a test conflicts with a mandatory CU event, we can arrange to have you take it before the test day, but not after. Similarly, assignments are given well ahead of their due date, so late assignments will not receive credit.
+
+### Exams
+
+There will be two midterms throughout the semester. They will consist of multiple choice questions along with a couple of free response questions. You may use your notes and book for the exam, but may not work with anyone on them. Any tables required will be provided by the instructor. There will be no make-up exams, unless there is documentation of a medical or family emergency. If you miss an exam, the weight of that exam will be added to the final exam. The final exam is cumulative, but the midterms are not.
+
+### Email
+
+Feel free to email me with questions about the course. However, if you want to talk about why you got a particular grade, you must come to office hours. Please give me 24 hours to respond before sending another email.
+
+### Office Hours
+
+If you have a schedule conflict during my office hours, you may email me to set up a different time to meet.
+
+### Cheating
+
+Don’t do it, you will automatically get a zero.
+
+---
+
+## Tentative Course Calendar
+
+
+<div style="max-width:100%">
+```{r echo = F}
+link_classes <- function(col) {
+	col <- replace_na(col, " ")
+
+	# Add githack link
+	lecture_nums <- as.numeric(str_match(col, "Lecture ([:digit:]{1,2})")[,2])
+	col <- dplyr::case_when(
+	  lecture_nums <= 12 ~ str_replace(col, "Lecture ([:digit:]{1,2})", "<a href = 'https://raw.githack.com/kylebutts/ECON3535_F2022/master/Slides/Topic_1.html' style = 'color: #107895;'>Lecture \\1</a>"),
+	  lecture_nums <= 21 ~ str_replace(col, "Lecture ([:digit:]{1,2})", "<a href = 'https://raw.githack.com/kylebutts/ECON3535_F2022/master/Slides/Topic_2.html' style = 'color: #107895;'>Lecture \\1</a>"),
+	  lecture_nums <= 26 ~ str_replace(col, "Lecture ([:digit:]{1,2})", "<a href = 'https://raw.githack.com/kylebutts/ECON3535_F2022/master/Slides/Topic_3.html' style = 'color: #107895;'>Lecture \\1</a>"),
+	  lecture_nums >  26 ~ str_replace(col, "Lecture ([:digit:]{1,2})", "<a href = 'https://raw.githack.com/kylebutts/ECON3535_F2022/master/Slides/Topic_4.html' style = 'color: #107895;'>Lecture \\1</a>"),
+	  TRUE ~ col
+	)
+
+	col <- str_replace(
+		col, "Syllabus",
+		"<a href = '#' style = 'color: #107895;'>Syllabus</a>"
+	)
+
+	# color No Class, Midterm, and Topic
+	col <- str_replace(
+		col, "No Class",
+		"<span style = 'color: #F26D21;'>No Class</span>"
+	)
+	col <- str_replace(
+		col, "Midterm",
+		"<span style = 'color: #9A2515;'>Midterm</span>"
+	)
+	col <- str_replace(
+	  col, "Topic ([1-4]) - (.*?)<br/>",
+	  "<span style = 'color: #829356;;'>Topic \\1</span><br/>"
+	)
+	col
+}
+
+link_assignments <- function(col) {
+	col <- replace_na(col, " ")
+
+	col <- str_replace(
+		col, "Final Exam",
+		"<span style = 'color: #9A2515;'>Final Exam</span>"
+	)
+
+	col
+}
+
+cal <- read_csv(here("schedule.csv")) %>%
+	pivot_wider(., names_from = "name", values_from = "value") %>%
+	mutate(
+		Monday = link_classes(Monday),
+		Wednesday = link_classes(Wednesday),
+		Friday = link_classes(Friday),
+		Assignments = link_assignments(Assignments),
+		Monday = map(Monday, gt::html),
+		Wednesday = map(Wednesday, gt::html),
+		Friday = map(Friday, gt::html),
+		Assignments = map(Assignments, gt::html),
+		Dates = map(Dates, gt::html)
+	)
+
+(cal_tbl <- cal %>%
+	gt() %>%
+		# kfbmisc::gt_theme_kyle() %>%
+		tab_options(
+		  table.font.size = px(10),
+			data_row.padding = px(6)
+		) %>%
+		tab_spanner(
+			label = "Classes",
+			columns = c("Monday", "Wednesday", "Friday")
+		) %>%
+		cols_align(
+			align = "left",
+			columns = c("Week", "Dates", "Monday", "Wednesday", "Friday", "Assignments")
+		) %>%
+		tab_header(title = "Course Calendar")
+)
+
+```
+
+
+---
+
+## University Policies
+
+<div style="height: 0px;"></div>
+
+### Students with Disabilities:
+
+If you qualify for accommodations
+because of a disability, please submit to me a letter from disability
+services in a timely manner so that your needs can be addressed.
+Disability services determine accommodations based on documented
+disabilities. Contact: 303-492-8671, Center for Community N200.
+
+### Religious Observance Policy:
+
+Campus policy regarding religious
+observances requires that faculty make every effort to reasonably and
+fairly deal with all students who, because of religious obligations,
+have conflicts with scheduled exams, assignments, or required
+attendance. If you have a conflict, please contact me at the beginning
+of the term so we can make proper arrangements.
+
+### Honor Code:
+
+All students of the University of Colorado at Boulder
+are responsible for knowing and adhering to the academic integrity
+policy of this institution. Violations of this policy may include:
+cheating, plagiarism, aid of academic dishonesty, fabrication, lying,
+bribery, and threatening behavior. All incidents of academic misconduct
+shall be reported to the Honor Code Council (<honor@colorado.edu>;
+303-725-2273). Students who are found to be in violation of the academic
+integrity policy will be subject to both academic sanctions from the
+faculty member and non-academic sanctions (including but not limited to
+university probation, suspension, or expulsion). Other information on
+the Honor Code can be found at:
+<http://www.colorado.edu/policies/honor.html> and at
+<http://www.colorado.edu/academics/honorcode/>
+
+### Discrimination & Harassment Policy:
+
+The University of Colorado
+Policy on Sexual Harassment applies to all students, staff and faculty.
+Sexual harassment is unwelcome sexual attention. It can involve
+intimidation, threats, coercion, or promises or create an environment
+that is hostile or offensive. Harassment may occur between members of
+the same or opposite gender and between any combinations of members in
+the campus community: students, faculty, staff, and administrators.
+Harassment can occur anywhere on campus, including the classroom, the
+workplace, or a residence hall. Any student, staff or faculty member who
+believes s/he has been sexually harassed should contact the Office of
+Discrimination and Harassment (ODH) at 303-492-2127 or the Office of
+Judicial Affairs at 303-492-5550. Information about the ODH and the
+campus resources available to assist individuals who believe they have
+been sexually harassed can be obtained at:
+<http://www.colorado.edu/odh/>
