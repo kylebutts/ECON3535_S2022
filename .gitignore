@@ -6,6 +6,8 @@ Slides/libs/.DS_Store
 ## Stupid microsoft word 
 ~$*
 
+# Avoid commiting textbook
+Textbook.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
