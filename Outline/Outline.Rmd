@@ -1,6 +1,6 @@
 ---
-title: "Syllabus"
-subtitle: "ECON 3818: Introduction to Statistics"
+title: "Outline"
+subtitle: "ECON 3535: Natural Resource Economics"
 author: "Kyle Butts"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:

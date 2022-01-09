@@ -1,6 +1,6 @@
 ---
 title: "Syllabus"
-subtitle: "ECON 3818: Introduction to Statistics"
+subtitle: "ECON 3535: Natural Resource Economics"
 author: "Kyle Butts"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:
@@ -167,7 +167,7 @@ gt(grades) %>%
 
 There will be one math assignment and one writing assignment. The math assignment will involve using economic models to solve problems related to natural resource allocation. These will be graded for correctness, and you may work alone or in groups of 2. Each group will turn in a single assignment on Canvas and include your partner's name so you both receive a grade.
 
-The written assignment will ask you to chose a policy of interest and present to a imaginary policy maker using economic concepts that we discuss in the course. This will require you to discuss the trade-offs that may occur and any potential effects (good and/or bad!) of the incentives created by the policy. Literature reviews will be graded based on effort and meeting the guidelines.
+The written assignment will ask you to chose a policy of interest and present to a imaginary policy maker using economic concepts that we discuss in the course. This will require you to discuss the trade-offs that may occur and any potential effects (good and/or bad!) of the incentives created by the policy. This assignment will be graded based on effort and meeting the guidelines.
 
 ---
 
@@ -235,7 +235,7 @@ link_classes <- function(col) {
 	)
 	col <- str_replace(
 	  col, "Topic ([1-4]) - (.*?)<br/>",
-	  "<span style = 'color: #829356;;'>Topic \\1</span><br/>"
+	  "<span style = 'color: #829356;'>Topic \\1</span><br/>"
 	)
 	col
 }

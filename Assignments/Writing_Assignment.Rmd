@@ -1,0 +1,74 @@
+---
+title: "Writing Assignment"
+subtitle: "ECON 3535: Natural Resource Economics"
+author: "Kyle Butts"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  xaringan::moon_reader:
+    css: ['default']
+    ## No title slide
+    seal: false
+    self_contained: true
+    nature:
+      ratio: '8.5:11'
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r preamble, child=here::here("document-preamble.Rmd")}
+```
+
+```{r, echo = F}
+library(icons)
+library(tidyverse)
+library(gt)
+```
+
+<h1 class="hi text-2xl center coral">Writing Assignment</h1>
+
+For this assignment, you should chose an environmental policy that you are interested in. You are to prepare a written memo that you would present to an imaginary policy maker as their "economic advisor". First, you should describe the policy you have chosen. Then, using economic concepts that we have discussed in the course, you should discuss the potential effects (good and/or bad!) of the incentives created by the policy. *Remember that policies often can have effects other than their stated goals*. What are the trade-offs inherent to this policy? *e.g. What are alternative policies? What are the costs of the policy?* Your assignment should be around 4-6 pages and should support itself with cited work.
+
+### Physical requirements
+4 pages minimum, 6 pages maximum in length, double spaced, Times New Roman or Calibri 12 point.  1” margins, with 1 page additionally for references. 
+
+
+
+### Generating Topics
+
+Here are a few of good places to look for research questions. You probably shouldn’t use them as actual sources, but they will help you find ideas.
+
+-  https://www.greentechmedia.com
+-  https://Energyathaas.wordpress.com
+-  https://www.vox.com/energy-and-environment
+-  “Example” and “Debate” sections in the textbook
+
+### Finding Sources
+One very useful way to find sources is to find a paper you like, and look at its citations (at the end of the paper) and the “cited by ” option on Google Scholar a) Google Scholar is very helpful. If you search for a paper you want to cite, you will see a quotation mark symbol under each search result. Click that, and you get a pre-made citation to copy-paste for your bibliography section.
+
+---
+## Grading Rubric
+
+```{r grading-rubric, echo = F}
+rubric <- tibble::tribble(
+  ~"Category", ~"Description", ~"Tips",
+  "Groups of Interest <br/> <span style = 'color: #829356;'>30%</span>",	"Identify groups of interest, their incentives, and how they are affected by the policy.", "If you do this correctly, the rest of the paper will follow. You may revise once you identify interests that you didn’t recognize at first.", 
+	"Identifying Trade-offs <br/> <span style = 'color: #829356;'>30%</span>", "Present the trade-offs of this policy.", "You should consider alternative policies and how they may be better in some aspects and worse in others. Also, consider directly the costs of implementing the program and the benefits. Just because a policy can havea good effect doesn't mean it has no cost or that it is the most efficient way to achieve the benefits.", 
+	"Citations <br/> <span style = 'color: #829356;'>10%</span>", "Make sure your sources are reliable. Academic journals are the best, but you may also use policy reports or briefings.", "You need to study the existing literature on this topic, to see what different economists argue. For a lot of policies, ex-post analysis has been done to see what the effects are. This is a great way to build your paper.", 
+  "Quality of Writing <br/> <span style = 'color: #829356;'>15%</span>",	"Your paper should be easy to read. Grammar and spelling need to be checked.", "Do not forget about the “writing center” at CU Boulder to review your final draft.",	
+  "Creativity <br/> <span style = 'color: #829356;'>15%</span>",	"Be creative in the use of the tools you have acquired as well as in the topics that are important to you.", "Enjoy writing about a topic that you care about",
+)
+
+gt::gt(rubric) |>
+  gt::cols_width(
+    Category ~ px(100),
+    Description ~ px(160),
+    Tips ~ px(160),
+  ) |>
+  gt::cols_align(align = "left") |>
+  gt::tab_options(
+    data_row.padding = px(6),
+    table.font.size = px(10)
+  )
+```
+
