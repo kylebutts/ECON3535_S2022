@@ -33,17 +33,16 @@ The aim of this course is to teach you to be able to think about **incentives** 
 
 ## Course Info
 
-<div style="min-height: 2rem;"></div>
+<div style="min-height: 1rem;"></div>
 
 ```{r info-table, echo = F}
 table <- tribble(
   ~Icon, ~Name, ~Time, ~Location,
   as.character(icons::fontawesome("chalkboard-teacher")), "Instructor", "Kyle Butts", "<a href = 'emailto:kyle.butts@colorado.edu'>kyle.butts@colorado.edu</a>",
   as.character(icons::fontawesome("school")), "Lecture", "MWF 12:20-1:10pm", "Humanities 135",
-  as.character(icons::fontawesome("laptop-house")), "Office Hours", "TBD", "<a href = 'https://cuboulder.zoom.us/s/3975335005'>Zoom</a>",
-  as.character(icons::fontawesome("chalkboard-teacher")), "TA", "TBD", "<a href = 'emailto:tbd@colorado.edu'>tbd@colorado.edu</a>",
-  as.character(icons::fontawesome("laptop-house")), "Office Hours", "TBD", "<a href = '#'>Zoom</a>",
-  as.character(icons::fontawesome("book")), "Textbook", "The Basic Practice of Statistics 11e. <br/> David Moore, William Notz, <br/> and Michael A Fligner.", "",
+  as.character(icons::fontawesome("laptop-house")), "Office Hours", "M 1:30-2:30pm, W 10-12pm", "<a href = 'https://cuboulder.zoom.us/s/3975335005'>Zoom</a>",
+  as.character(icons::fontawesome("chalkboard-teacher")), "TA", "Xiaomeng.Zhao@colorado.edu", "<a href = 'emailto:Xiaomeng.Zhao@colorado.edu'>xiaomeng.Zhao@colorado.edu</a>",
+  as.character(icons::fontawesome("book")), "Textbook", "Natural Resource Economics 11e. <br/> Tietenberg, Thomas and Lewis, Lynne.", "",
 )
 
 table %>%
@@ -67,8 +66,6 @@ table %>%
   )
 ```
 
-
-
 ---
 
 ## Grading
@@ -77,35 +74,22 @@ table %>%
 
 ```{r grading-summary, echo = F}
 grades <- tribble(
-  ~Assignment, ~Percentage, ~Blank, ~Assignment2, ~Percentage2,
-  "<b>Homework</b>", .1, "", "<b>Midterm 1</b>", .2,
-  "<b>R Problem Sets</b>", .15, "", "<b>Midterm 2</b>", .2,
-  "<b>R Project</b>", .15, "", "<b>Final</b>", .2
+  ~Assignment, ~Percentage,
+  "<b>Assignments</b>", .30, 
+  "<b>Midterms</b>", .3,
+  "<b>Final</b>", .40
 ) %>%
   mutate(
-    Assignment = map(Assignment, gt::html),
-    Assignment2 = map(Assignment2, gt::html)
+    Assignment = map(Assignment, gt::html)
   )
 
 gt(grades) %>%
-  fmt_percent(columns = c("Percentage", "Percentage2"), decimals = 0) %>%
+  fmt_percent(columns = c("Percentage"), decimals = 0) %>%
   gt::cols_width(
-    Assignment ~ px(100),
-    Assignment2 ~ px(100),
-    Percentage ~ px(80),
-    Percentage2 ~ px(70),
-    Blank ~ px(20)
+    Assignment ~ px(80),
+    Percentage ~ px(30),
   ) %>%
   gt::cols_align(align = "left") %>%
-  # Border right
-  gt::tab_style(
-    style = list(cell_borders(
-      sides = c("left"),
-      color = "#D3D3D3",
-      weight = px(2)
-    )),
-    locations = list(cells_body(columns = Blank))
-  ) %>%
   gt::tab_options(
     data_row.padding = px(2),
     table.font.size = px(10),
@@ -117,13 +101,9 @@ gt(grades) %>%
 <div style="min-height: 2rem;"></div>
 
 
-We will have two midterms, but I will only count the higher grade of the two. The final exam will be cumulative, but more more heavily weighted towards the most recent material.
-
-I will curve each midterm separately. After the final exam I will curve the final grades so that the average grade for the whole class is an 81 (B-). The curve follows a strict formula, and I will not manually adjust grades for any reason. Letter grades are assigned according to the standard numerical formula used at CU:
-
+We will have two midterms, but I will only count the higher grade of the two. The final exam will be cumulative, but more more heavily weighted towards the most recent material. I will curve each midterm separately. After the final exam I will curve the final grades so that the average grade for the whole class is an 81 (B-). The curve follows a strict formula, and I will not manually adjust grades for any reason. Letter grades are assigned according to the standard numerical formula used at CU:
 
 <div style="min-height: 2rem;"></div>
-
 ```{r letter-grades, echo = F}
 grades <- tribble(
   ~Grade, ~Percentage, ~Blank, ~Grade2, ~Percentage2,
@@ -162,19 +142,19 @@ gt(grades) %>%
 ```
 <div style="min-height: 2rem;"></div>
 
-
 ### Assignments
 
 There will be one math assignment and one writing assignment. The math assignment will involve using economic models to solve problems related to natural resource allocation. These will be graded for correctness, and you may work alone or in groups of 2. Each group will turn in a single assignment on Canvas and include your partner's name so you both receive a grade.
 
 The written assignment will ask you to chose a policy of interest and present to a imaginary policy maker using economic concepts that we discuss in the course. This will require you to discuss the trade-offs that may occur and any potential effects (good and/or bad!) of the incentives created by the policy. This assignment will be graded based on effort and meeting the guidelines.
 
+
+
 ---
 
 ## Course Policies
 
 <br/>
-
 ### Attendance
 
 I will not be taking attendance, so skip class at your own risk. Lecture slides will be posted on Canvas. The slides are a valuable study tool for the exams, but it will be hard to do well without regular attendance.
@@ -204,7 +184,6 @@ Don’t do it, you will automatically get a zero.
 ## Tentative Course Calendar
 
 
-<div style="max-width:100%">
 ```{r echo = F}
 link_classes <- function(col) {
 	col <- replace_na(col, " ")
