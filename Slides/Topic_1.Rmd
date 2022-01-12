@@ -35,7 +35,7 @@ class: clear, middle
 
 ## Elk Antlers and the Prisoner's Dilemma
 
-```{r, out.width="70%"}
+```{r, echo = F, out.width="90%"}
 knitr::include_graphics("https://miro.medium.com/max/1400/1*9hFXrKToYMELDmsc5-dBDQ.jpeg")
 ```
 
@@ -58,8 +58,9 @@ tibble::tribble(
     ~"Elk 2 / Elk 1", ~"Big Horns", ~"Small Horns",
     "Big Horns", "(3,3)", "(8,0)",
     "Small Horns", "(0,8)", "(5,5)"
-) %>% 
-  gt::gt() 
+) |> 
+  gt::gt() |> 
+  gt::tab_options(table.font.size = px(18))
 ```
 
 
@@ -83,8 +84,9 @@ tibble::tribble(
     ~"Elk 2 / Elk 1", ~"Big Horns", ~"Small Horns",
     "Big Horns", "(3,3)", "(8,0)",
     "Small Horns", "(0,8)", "(5,5)"
-) %>% 
-  gt::gt() 
+) |> 
+  gt::gt() |> 
+  gt::tab_options(table.font.size = px(18))
 ```
 
 
@@ -116,34 +118,6 @@ Do we believe this to be true in the following games:
 
 
 ---
-### Example for Bonus Points on Exam
-
-The game:
-
-I will pick sets of two students. There are 2 bonus points on the exam for the pair of you. 
-
-<br> 
-
-Both of you will chat me on Zoom privately whether you want to "split" or "steal" the points.
-
-  - If you both select "split", you both get 1 point.
-
-  - If 1 selects "steal" and the other "split", "steal" will get both points.
-
-  - If both select "steal", neither of you will get bonus points.
-  
----
-
----
-
-class: inverse, center, middle
-
-### 1 Bonus point for everyone
-
-![](graphics/the-rules-are-made-up-and-the-points-dont-matter.jpg)
-
-
----
 ##Prisoner's Dilemma in Resource Economics
 
 ***Open Access Goods***:
@@ -155,26 +129,89 @@ class: inverse, center, middle
   
 ---
 ### Natural Resources Examples
+.subheader.alice[Cooperation vs. Defection]
 
 *Oil and gas extraction*:
+
+---
+### Natural Resources Examples
+.subheader.alice[Cooperation vs. Defection]
+
+*Oil and gas extraction*:
+
 - Cooperation = responsible extraction methods
 - Defection = damaging extraction
 
 *Groundwater extraction*:
+
+
+---
+### Natural Resources Examples
+.subheader.alice[Cooperation vs. Defection]
+
+*Oil and gas extraction*:
+
+- Cooperation = responsible extraction methods
+- Defection = damaging extraction
+
+*Groundwater extraction*:
+
 - Cooperation = limited pumping to keep pumping costs down
 - Defection = extracting as much as possible and raising the costs for everyone
 
 *Climate change mitigation*:
+
+
+
+---
+### Natural Resources Examples
+.subheader.alice[Cooperation vs. Defection]
+
+*Oil and gas extraction*:
+
+- Cooperation = responsible extraction methods
+- Defection = damaging extraction
+
+*Groundwater extraction*:
+
+- Cooperation = limited pumping to keep pumping costs down
+- Defection = extracting as much as possible and raising the costs for everyone
+
+*Climate change mitigation*:
+
 - Cooperation = adhering to international standards
 - Defection = emitting as much as is privately profitable
 
 *Fisheries and forestry*:
+
+
+---
+### Natural Resources Examples
+.subheader.alice[Cooperation vs. Defection]
+
+*Oil and gas extraction*:
+
+- Cooperation = responsible extraction methods
+- Defection = damaging extraction
+
+*Groundwater extraction*:
+
+- Cooperation = limited pumping to keep pumping costs down
+- Defection = extracting as much as possible and raising the costs for everyone
+
+*Climate change mitigation*:
+
+- Cooperation = adhering to international standards
+- Defection = emitting as much as is privately profitable
+
+*Fisheries and forestry*:
+
   - Cooperation = sustainable harvest levels
   - Defection = unsustainable harvest levels
 
 ---
 
-class: inverse, center, middle
+class: center, middle
 
 ### The point
 <hr><br>
