@@ -9,10 +9,10 @@ link_classes <- function(col) {
 	# Add githack link
 	lecture_nums <- as.numeric(str_match(col, "Lecture ([:digit:]{1,2})")[,2])
 	col <- dplyr::case_when(
-	  lecture_nums <= 12 ~ str_replace(col, "Lecture ([:digit:]{1,2})", "<a href = 'https://raw.githack.com/kylebutts/ECON3535_F2022/master/Slides/Topic_1.html' style = 'color: #107895;'>Lecture \\1</a>"),
-	  lecture_nums <= 21 ~ str_replace(col, "Lecture ([:digit:]{1,2})", "<a href = 'https://raw.githack.com/kylebutts/ECON3535_F2022/master/Slides/Topic_2.html' style = 'color: #107895;'>Lecture \\1</a>"),
-	  lecture_nums <= 26 ~ str_replace(col, "Lecture ([:digit:]{1,2})", "<a href = 'https://raw.githack.com/kylebutts/ECON3535_F2022/master/Slides/Topic_3.html' style = 'color: #107895;'>Lecture \\1</a>"),
-	  lecture_nums >  26 ~ str_replace(col, "Lecture ([:digit:]{1,2})", "<a href = 'https://raw.githack.com/kylebutts/ECON3535_F2022/master/Slides/Topic_4.html' style = 'color: #107895;'>Lecture \\1</a>"),
+	  lecture_nums <= 12 ~ str_replace(col, "Lecture ([:digit:]{1,2})", "<a href = 'https://raw.githack.com/kylebutts/ECON3535_S2022/master/Slides/Topic_1.html' style = 'color: #107895;'>Lecture \\1</a>"),
+	  lecture_nums <= 21 ~ str_replace(col, "Lecture ([:digit:]{1,2})", "<a href = 'https://raw.githack.com/kylebutts/ECON3535_S2022/master/Slides/Topic_2.html' style = 'color: #107895;'>Lecture \\1</a>"),
+	  lecture_nums <= 26 ~ str_replace(col, "Lecture ([:digit:]{1,2})", "<a href = 'https://raw.githack.com/kylebutts/ECON3535_S2022/master/Slides/Topic_3.html' style = 'color: #107895;'>Lecture \\1</a>"),
+	  lecture_nums >  26 ~ str_replace(col, "Lecture ([:digit:]{1,2})", "<a href = 'https://raw.githack.com/kylebutts/ECON3535_S2022/master/Slides/Topic_4.html' style = 'color: #107895;'>Lecture \\1</a>"),
 	  TRUE ~ col
 	)
 
