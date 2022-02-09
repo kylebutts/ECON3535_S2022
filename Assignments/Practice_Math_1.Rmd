@@ -1,0 +1,121 @@
+---
+title: "Math Assignment"
+subtitle: "ECON 3535: Natural Resource Economics"
+author: "Kyle Butts"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  xaringan::moon_reader:
+    css: ['default']
+    ## No title slide
+    seal: false
+    self_contained: true
+    nature:
+      ratio: '8.5:11'
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r preamble, child=here::here("document-preamble.Rmd")}
+```
+
+```{r, echo = F}
+library(icons)
+library(tidyverse)
+library(gt)
+```
+
+<h1 class="hi text-2xl center coral">Practice Math Assignment</h1>
+
+## Two period model of a non-renewable resource
+
+Consider extraction of a non-renewable natural resource. The inverse demand function
+for the depletable resource is \\(P = 12 – Q\\) in both periods \\(1\\) and \\(2\\) and the marginal cost of supplying it is \\(\\$3\\). The discount rate is \\(10\\%\\). There are \\(7.5\\) units total.
+
+<ol>
+<li>Find the equilibrium allocation in each period for resource extraction</li>
+
+<li>Describe why \(Q_1 = 3\) and \(Q_2 = 4.5\) is not optimal</li>
+
+<li>What is the marginal user cost? Interpret this number.</li>
+
+<li>Now assume \(r = 0\). What is the optimal allocation now? Why did it change in the direction that it did?</li>
+</ol>
+
+
+---
+
+## Two period model of a non-renewable resource
+
+Consider extraction of a non-renewable natural resource. The inverse demand function
+for the depletable resource is \\(P = 12 – Q\\) in both periods \\(1\\) and \\(2\\) and the marginal cost of
+supplying it is \\(2 + Q/2\\). The discount rate is \\(6\\% \\). There are \\(15\\$\\) units total.
+
+<ol>
+<li>Find the equilibrium allocation in each period for resource extraction</li>
+
+<li>What is the marginal user cost? Interpret this number.</li>
+</ol>
+
+
+
+
+---
+
+## Tradable Permits
+
+wo firms can control emissions at the following marginal costs: \\(MC_1 = 200 a_x\\) and
+\\(MC_2 = 100 a_y\\) where \\(a_x\\) and \\(a_y\\) are, respectively, the amount of emissions reduced by the
+first and second firms. Assume that with no control at all, each firm would be emitting \\(20\\)
+units of emissions or a total of \\(40\\) units for both firms.
+
+<ol>
+<li>Consider a cap-and-trade system that aims for a total reduction of \(21\) units of emis-
+sions is necessary. 
+  <ul>
+  <li>What is the equilibrium allocation of permits to each firm?</li>
+  <li>At what price would these permits sell for at an auction</li>
+  </ul>
+</li>
+
+<li>Assume that the control authority wanted to reach its objective by using an emissions
+charge system instead.
+  <ul>
+  <li>What tax amount should them impose to reach this equilibrium?</li>
+  <li>How much revenue would the government collect?</li>
+  </ul>
+</li>
+
+<li>Why is cap-and-trade more cost-effective than a uniform standard where each firm
+reduces pollution by \(10.5\) units?</li>
+</ol>
+
+
+---
+
+## Tradable Permits
+
+
+Two firms can control emissions at the following marginal costs: \\( MC_1 = 5 + 10 a_x \\) and
+\\(MC_2 = 11 a_y\\) where \\(a_x\\) and \\(a_y\\) are, respectively, the amount of emissions reduced by the
+first and second firms. Assume that with no control at all, each firm would be emitting \\(20\\)
+units of emissions or a total of \\(10\\) units for both firms.
+
+<ol>
+<li>Consider a cap-and-trade system that aims for a total reduction of \(21\) units of emis-
+sions is necessary. 
+  <ul>
+    <li>What is the equilibrium allocation of permits to each firm?</li>
+    <li>At what price would these permits sell for at an auction</li>
+  </ul>
+</li>
+
+<li>Assume that the control authority wanted to reach its objective by using an emissions
+charge system instead.
+  <ul>
+    <li>What tax amount should them impose to reach this equilibrium?</li>
+    <li>How much revenue would the government collect?</li>
+  </ul>
+</li>
+</ol>
+
