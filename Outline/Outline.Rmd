@@ -49,11 +49,11 @@ link_classes <- function(col) {
 	# color No Class, Midterm, and Topic
 	col <- str_replace(
 		col, "No Class",
-		"<span style = 'color: #F26D21;'>No Class</span>"
+		"<span style = 'color: #F26D21; '>No Class</span>"
 	)
 	col <- str_replace(
 		col, "Midterm",
-		"<span style = 'color: #9A2515;'>Midterm</span>"
+		"<span style = 'color: #9A2515; font-style: italic;'>Midterm</span>"
 	)
 	col <- str_replace(
 	  col, "Topic ([1-4]) - (.*?)<br/>",
@@ -67,7 +67,7 @@ link_assignments <- function(col) {
 
 	col <- str_replace(
 		col, "Final Exam",
-		"<span style = 'color: #9A2515;'>Final Exam</span>"
+		"<span style = 'color: #9A2515; font-style: italic;'>Final Exam</span>"
 	)
 
 	col
@@ -91,7 +91,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 	gt() %>%
 		# kfbmisc::gt_theme_kyle() %>%
 		tab_options(
-		  table.font.size = px(10),
+		  table.font.size = px(9),
 			data_row.padding = px(6)
 		) %>%
 		tab_spanner(
@@ -112,7 +112,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 ## Unit 1: Economic Fundamentals 
 <div style="height: 0.25rem;"></div>
 
-### Lecture 1
+### LECTURE 1
 
 
 - Intro to Class
@@ -124,7 +124,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - [Robert Frank's The Darwin Economy](https://kylebutts.com/ECON3535_S2021/Articles/Excerpts%20from%20The%20Darwin%20Economy.pdf)
 
 
-### Lecture 2
+### LECTURE 2
 
 
 - Economic tools for analyzing natural resource problems
@@ -142,7 +142,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - "Choosing the Discount Rate", page 60
 
 
-### Lecture 3
+### LECTURE 3
 
 
 - Resource taxonomy
@@ -160,7 +160,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - [Michael Greenstone's Managing Climate Risk](https://kylebutts.com/ECON3535_S2021/Articles/What%20Financial%20Markets%20Can%20Teach%20Us%20About%20Managing%20Climate%20Risks.pdf) ([online version](https://www.nytimes.com/2017/04/04/upshot/what-financial-markets-can-teach-us-about-managing-climate-risks.html)).
 
 
-### Lecture 4
+### LECTURE 4
 
 
 - Mineral two-period model
@@ -174,7 +174,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 
 ---
 
-### Lecture 5
+### LECTURE 5
 
 
 - Two-period model wrap up
@@ -186,7 +186,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - "Efficient Intertemporal Allocations", page 127
 
 
-### Lecture 6
+### LECTURE 6
   
 
 - Efficiency
@@ -202,7 +202,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - Example 2.2 Shrimp Farming Externalities in Thailand, page 27
 
 
-### Lecture 7
+### LECTURE 7
 
 
 - Coase theorem
@@ -219,7 +219,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 
 
 
-### Lecture 8
+### LECTURE 8
 
 
 - Policy tools
@@ -234,7 +234,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 
 ---
 
-### Lecture 9
+### LECTURE 9
 
 - Policy comparisons
 
@@ -245,14 +245,14 @@ cal <- read_csv(here("schedule.csv")) %>%
 - "Command and control vs market-based policies", page 358
 
 
-### Lecture 10
+### LECTURE 10
 
 - Policies Continued
 
 - Numerical Exercise
 
 
-### Lecture 11
+### LECTURE 11
 
 - Taxes and Deadweight Loss
 
@@ -265,7 +265,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - [Pigouvian Taxes](https://www.youtube.com/watch?v=UYShebe44Xs)
 
 
-### Lecture 12
+### LECTURE 12
 
 - Growth and Development
 
@@ -287,12 +287,12 @@ cal <- read_csv(here("schedule.csv")) %>%
 ## Unit 2: Energy Resources
 <div style="height: 0.25rem;"></div>
 
-### Lecture 13
+### LECTURE 13
 
 - Energy Overview
 
 
-### Lecture 14
+### LECTURE 14
 
 - Electricity Industry
 
@@ -303,7 +303,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - "Electricity" and Examples 7.5 and 7.6, pages 158
 
 
-### Lecture 15
+### LECTURE 15
   
 - Coal
   
@@ -314,7 +314,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 *Readings for this lecture*
 
 
-### Lecture 16  
+### LECTURE 16  
 
 - Natural Gas
 
@@ -323,7 +323,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - [Renewable energy - the global transition, explained in 12 charts](https://kylebutts.com/ECON3535_S2021/Articles/Renewable%20energy%20-%20the%20global%20transition,%20explained%20in%2012%20charts.pdf) ([online version](https://www.vox.com/energy-and-environment/2019/6/18/18681591/renewable-energy-china-solar-pv-jobs))
 
 
-### Lecture 17
+### LECTURE 17
 
 - Renewables overview
 
@@ -339,7 +339,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 
 
 ---
-### Lecture 18
+### LECTURE 18
 
 - Solar
 
@@ -348,7 +348,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - Interview with NREL Researcher: [Solar power’s greatest challenge was discovered 10 years ago. It looks like a duck. ](https://kylebutts.com/ECON3535_S2021/Articles/Solar%20powers%20greatest%20challenge%20was%20discovered%2010%20years%20ago.%20It%20looks%20like%20a%20duck%20-%20Vox.pdf) ([online version](https://www.vox.com/energy-and-environment/2018/3/20/17128478/solar-duck-curve-nrel-researcher)).
 
 
-### Lecture 19
+### LECTURE 19
 
 - Energy storage
 
@@ -361,7 +361,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - [Demand Response](https://energy.gov/oe/activities/technology-development/grid-modernization-and-smart-grid/demand-response)
 
 
-### Lecture 20
+### LECTURE 20
 
 - Hydroelectric
 
@@ -372,7 +372,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - [The Future of Energy Storage Beyond Lithium Ion](https://www.youtube.com/watch?v=EoTVtB-cSps)
 
 
-### Lecture 21
+### LECTURE 21
 
 - Transportation
 
@@ -385,7 +385,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 ## Unit 3: Pollution, Climate Change, and Policy
 <div style="height: 0.25rem;"></div>
 
-### Lecture 22 
+### LECTURE 22 
 
 - Climate change
 
@@ -398,7 +398,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - [The Uninhabitable Earth](https://kylebutts.com/ECON3535_S2021/Articles/The%20Uninhabitable%20Earth.pdf) ([online version](https://nymag.com/intelligencer/2017/07/climate-change-earth-too-hot-for-humans.html)).
 
 
-### Lecture 23
+### LECTURE 23
 
 - Policies for local air pollution
 
@@ -411,7 +411,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - [NYTimes' The Daily: Joe Biden's Climate Plan](https://www.nytimes.com/2021/02/02/podcasts/the-daily/biden-climate-agenda.html)
 
 
-### Lecture 24
+### LECTURE 24
 
 - International air pollution policies
 
@@ -422,7 +422,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - Example: Cancer Alley [Why This Town is Dying From Cancer](https://www.youtube.com/watch?v=ZB8CbDG7gpk)
 
 
-### Lecture 25
+### LECTURE 25
 
 - Paris Agreement
 
@@ -438,7 +438,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 
 
 ---
-### Lecture 26
+### LECTURE 26
 
 - Environmental taxes
 
@@ -457,7 +457,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 <div style="height: 0.25rem;"></div>
 
 
-### Lecture 27
+### LECTURE 27
 
 - Valuation overview
 
@@ -470,7 +470,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - Chapter 3
 
 
-### Lecture 28
+### LECTURE 28
 
 - Different types of value
 
@@ -481,7 +481,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - Chapter 4
 
 
-### Lecture 29
+### LECTURE 29
 
 - Revealed preference methods
 
@@ -490,7 +490,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - Chapter 4
 
 
-### Lecture 30
+### LECTURE 30
 
 - Ecosystem services
 
@@ -499,7 +499,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - Chapter 4
 
 
-### Lecture 31
+### LECTURE 31
 
 - Bioeconomic systems
 
@@ -515,7 +515,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 
 ---
 
-### Lecture 32
+### LECTURE 32
 
 - Dynamic fisheries
 
@@ -526,7 +526,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - First half of chapter 12 (Until you get to the dynamic fisheries model)
 
 
-### Lecture 33
+### LECTURE 33
 
 - Forestry
 
@@ -537,7 +537,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 ## Writing Assignment due 4/15 at 11:59pm 
 <div style="height: 0.25rem;"></div>
 
-### Lecture 34
+### LECTURE 34
 
 - Land use
 
@@ -548,7 +548,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - Chapter 10
 
 
-### Lecture 35
+### LECTURE 35
 
 - Water
 
@@ -557,7 +557,7 @@ cal <- read_csv(here("schedule.csv")) %>%
 - Chapter 9
 
 
-### Lecture 36
+### LECTURE 36
 
 - Waste and Recycling
 

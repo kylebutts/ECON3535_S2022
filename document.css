@@ -5,12 +5,12 @@
 
 :root {
   /* Fonts */
-  --text-font-family: 'Fira Sans', 'Atkinson Hyperelegible';
+  --text-font-family: 'JetBrains Mono', 'Operator Mono', 'Fira Sans', 'Atkinson Hyperelegible';
   --text-font-family-fallback: Roboto, -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial;
   --text-font-base: sans-serif;
-  --header-font-family: 'Fira Sans', 'Atkinson Hyperelegible'
+  --header-font-family: 'JetBrains Mono', 'Operator Mono', 'Fira Sans', 'Atkinson Hyperelegible';
   --header-font-family-fallback: Georgia, serif;
-  --code-font-family: 'Source Code Pro';
+  --code-font-family: 'JetBrains Mono', 'Operator Mono', 'Source Code Pro';
 
   /* block = display; none = don't display */
   --display-page: none;
@@ -108,7 +108,7 @@
 /* Base-size for rem */
 html {
   font-size: 9px;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
 }
 
 body {
@@ -241,19 +241,19 @@ text-sm {
 }
 text-base {
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
 }
 text-lg {
   font-size: 1.125rem;
-  line-height: 1.75rem;
+  line-height: 1.5rem;
 }
 text-xl {
   font-size: 1.25rem;
-  line-height: 1.75rem;
+  line-height: 1.6rem;
 }
 text-2xl {
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 1.75rem;
 }
 text-3xl {
   font-size: 1.875rem;
@@ -388,7 +388,7 @@ ol, ul {
 }
 li {
     margin-top: 4px;
-    line-height: 1.5rem;
+    line-height: 1.35rem;
 }
 
 /* Code Chunks */

@@ -82,7 +82,7 @@ Consider two utilities X and Y, which are subject to pollution control regulatio
 <li>The price for electricity generation received by each utility is $100/MWh.</li>
 <li>Assume that each firm produces 1 MWh of power regardless of regulation.</li>
 <li>Each utility separately emits 10.0 lbs of NOx/MWh in the absence of regulation.</li>
-<li>The regulator wishes to limit total emissions to 14.0 lbs of NOx/MWh.  In other words, the goal is total</li> abatement of 6.0 lbs of NOx/MWh (because 10 + 10 - 14 = 6).
+<li>The regulator wishes to limit total emissions to 14.0 lbs of NOx/MWh.  In other words, the goal is total abatement of 6.0 lbs of NOx/MWh (<i>because 10 + 10 - 14 = 6</i>).</li> 
 <li>Utility X has a total abatement cost of \(TAC_x(a_x) = 3a_x^2\) and marginal abatement cost of \(MAC_x = 6a_x\).</li>
 <li>Utility Y has a total abatement cost of \(TAC_x(a_x) = 8a_x^2\) and marginal abatement cost of \(MAC_x = 16a_x\).</li>
 </ul>
