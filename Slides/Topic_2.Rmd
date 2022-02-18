@@ -3,35 +3,21 @@ title: "Unit 2: Energy Resources"
 subtitle: "Econ 3535"
 author: "Kyle Butts"
 institute: "University of Colorado: Boulder"
-date: "2020-01-03 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: [default, metropolis-fonts, xaringan-themer.css]
-    nature:
+    css: ['default']
+    self_contained: true
+nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
+class: clear, middle
 
-```{r setup, include=FALSE}
-library(tidyverse)
-library(knitr)
-library(kableExtra)
-library(xaringanExtra)
-
-
-xaringanExtra::use_panelset()
+```{r preamble, child=here::here("Slides", "preamble.Rmd")}
 ```
 
-
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-library(xaringanthemer)
-style_mono_light(base_color = "#23395b", white_color = lighten_color("#23395b", strength = 0.98), link_color = "#de3f3c")
-```
-
-
-class: middle, inverse
 # Lecture 13
 
 - Energy Overview
