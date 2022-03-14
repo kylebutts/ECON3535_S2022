@@ -224,7 +224,7 @@ knitr::include_graphics("graphics/lcoe.png")
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 14
 
 Electricity Industry
@@ -418,7 +418,7 @@ knitr::include_graphics("graphics/electricity_state_deregulation.png")
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 15
   - Coal
   
@@ -580,7 +580,7 @@ Others believe this is a foolish idea, and we should decarbonize without gamblin
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 16
   
   - Natural Gas
@@ -695,7 +695,7 @@ Still emits plenty of CO2
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 17
 
   - Renewables overview
@@ -862,7 +862,7 @@ Recall the problem of non-constant externalities
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 18
   - Solar
 
@@ -1021,7 +1021,7 @@ Feed-in Tariffs (FIT)
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 19
 
   - Energy storage
@@ -1191,7 +1191,7 @@ Best option is probably time-of-use pricing
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 20
   - Hydroelectric
 
@@ -1362,7 +1362,7 @@ Ethical issues, US and international
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 21
 
   - Transportation

@@ -3,39 +3,29 @@ title: "Unit 4: Valuation and Non-Energy Resources"
 subtitle: "Econ 3535"
 author: "Kyle Butts"
 institute: "University of Colorado: Boulder"
-date: "2020-01-03 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: [default, metropolis-fonts, xaringan-themer.css]
-    nature:
+    css: ['default']
+    self_contained: true
+nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
-	
-```{r setup, include=FALSE}
-library(tidyverse)
-library(knitr)
-library(kableExtra)
-library(xaringanExtra)
+class: clear, middle
 
-
-xaringanExtra::use_panelset()
+```{r preamble, child=here::here("Slides", "preamble.Rmd")}
 ```
 
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-library(xaringanthemer)
-style_mono_light(base_color = "#23395b", white_color = lighten_color("#23395b", strength = 0.98), link_color = "#de3f3c")
-```
 
 ## Reading for This Lecture
 
-  - Chapter 3, pages 46-63
+- Chapter 3, pages 46-63
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 27
 
   - Valuation overview
@@ -225,7 +215,7 @@ Next time
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 28
 
   - Different types of value
@@ -414,7 +404,7 @@ A thorough survey would ask for both numbers
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 29
 
   - Revealed preference methods
@@ -583,7 +573,7 @@ Wealthier people end up having a higher VSL (yikes)
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 30
 
   - Ecosystem services
@@ -761,7 +751,7 @@ White House policy in 2015
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 31
 
   - Bioeconomic systems
@@ -1001,7 +991,7 @@ Why is the maximum profit? Two ways to think about it:
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 32
   - Dynamic fisheries
 
@@ -1099,7 +1089,7 @@ This often leads to overfishing
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 33
 
   - Forestry
@@ -1304,7 +1294,7 @@ Chapter 10
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 34
 
   - Land use
@@ -1470,7 +1460,7 @@ Weak form: food prices are rising faster than other prices
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 35
 - Water
 
@@ -1645,7 +1635,7 @@ Recent droughts put stress on the region
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 36
 - Waste and Recycling
 

@@ -3,40 +3,21 @@ title: "Unit 3: Pollution and Climate Change"
 subtitle: "Econ 3535"
 author: "Kyle Butts"
 institute: "University of Colorado: Boulder"
-date: "2020-01-03 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: [default, metropolis-fonts, xaringan-themer.css]
-    nature:
+    css: ['default']
+    self_contained: true
+nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
+class: clear, middle
 
-```{r setup, include=FALSE}
-library(tidyverse)
-library(knitr)
-library(kableExtra)
-library(xaringanExtra)
-
-
-xaringanExtra::use_panelset()
+```{r preamble, child=here::here("Slides", "preamble.Rmd")}
 ```
 
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-library(xaringanthemer)
-style_mono_light(base_color = "#23395b", white_color = lighten_color("#23395b", strength = 0.98), link_color = "#de3f3c")
-```
-
-
----
-## Reading for this Class
-
-- [The Uninhabitable Earth](../Articles/The Uninhabitable Earth.pdf) ([online version](https://nymag.com/intelligencer/2017/07/climate-change-earth-too-hot-for-humans.html)).
-
----
-class: middle, inverse
 # Lecture 22 
 
 - Climate change
@@ -188,13 +169,13 @@ Discount rate matters
   - Large $r$ $\implies$ we can wait longer
 
 Average social cost of carbon (per ton) estimate
-  - r=.05 $\implies$ $11
+  - $r=.05 \implies \$11$
   
-  - r=.03 $\implies$ $36
+  - $r=.03 \implies \$36$
   
-  - r=.025 $\implies$ $56
+  - $r=.025 \implies \$56$
   
-*Biden just set it to $51!*
+**Biden just set it to $51!**
 
 ---
 class: center, middle
@@ -210,12 +191,13 @@ class: center, middle
 ---
 ## Reading for next time
 
-[NYTimes The Daily - Biden's Climate Agenda](https://www.nytimes.com/2021/02/02/podcasts/the-daily/biden-climate-agenda.html)
+[The Uninhabitable Earth](../Articles/The Uninhabitable Earth.pdf) ([online version](https://nymag.com/intelligencer/2017/07/climate-change-earth-too-hot-for-humans.html)).
 
+[Why Half a Degree Matters (1.5 to 2)](https://www.nytimes.com/interactive/2018/10/07/climate/ipcc-report-half-degree.html)
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 23
 
 - Policies for local air pollution
@@ -236,6 +218,15 @@ Targeted coal-burning power plants to reduce atmospheric SO2 and NOx
 Market-based policy from the US Clean Air Act of 1990
   - Goal was to lower annual SO2 emissions from 18.9 million tons $\to$ 8.95 million tons
   - Less than half of 1980 emissions level
+  
+---
+## Acid Rain Program
+.subtitle.alice[as explained by Hank Green]
+
+.center[
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oqJO8HwxTkg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
 
 ---
 ## Acid Rain Program
@@ -359,7 +350,7 @@ Example: Cancer Alley - [Why This Town is Dying From Cancer](https://www.youtube
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 24
 
   - International air pollution policies
@@ -494,7 +485,9 @@ With universal compliance, the cost of stabilizing concentrations at 350-550 ppm
 1-3 year delay in reaching the global GDP that would have otherwise happened
   - BAU - business as usual, no big climate policy
   
-![Kyoto Theoretical Costs](graphics/kyoto-costs.png)
+```{r kyoto-costs, echo=FALSE, out.width="70%", fig.align='center'}
+knitr::include_graphics("graphics/kyoto-costs.png")
+```
 
 
 ---
@@ -545,7 +538,7 @@ Russia’s economic recession led to accidental compliance and lots of extra per
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 25
 
   - Paris Agreement
@@ -801,17 +794,14 @@ What will Biden do?
 ---
 ## Reading for Next Time
 
-  - [The Trump Administration Is Reversing More Than 100 Environmental Rules. Here’s the Full List.](../Articles/The Trump Administration Is Reversing More Than 100 Environmental Rules. Here’s the Full List. - The New York Times.pdf) ([online version](https://www.nytimes.com/interactive/2020/climate/trump-environment-rollbacks-list.html)).
-
-
-TBD: about Biden's Climate Efforts 
+  - [Tracking Climate Action Under the Biden Administration: Where Has Progress Been Made?](../Articles/What is the Biden Administration Doing to Fight Climate Change? | World Resources Institute.pdf) ([online version](https://www.wri.org/insights/biden-administration-tracking-climate-action-progress)).
 
 
 
 
 
 ---
-class: middle, inverse
+class: clear, middle
 # Lecture 26
 
   - Environmental taxes
