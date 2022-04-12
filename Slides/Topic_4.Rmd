@@ -127,6 +127,16 @@ Same idea as in markets with externalities
 
 
 ---
+### First Equimarginal Principle
+
+
+```{r first-equimarginal-principal, echo=FALSE, out.width="75%", fig.align='center'}
+knitr::include_graphics("graphics/First-Equimarginal-Principal.png")
+```
+
+
+
+---
 ### CBA limitations
 
 Study based on Army Corps of Engineers water projects
@@ -148,6 +158,7 @@ Who gets the benefits and who gets the costs?
 
 ---
 ### Cost-effectiveness analysis
+
 The major alternative to CBA is cost-effectiveness analysis
 
   - Pick a policy goal, find the least-cost method of getting there
@@ -315,7 +326,8 @@ Survey methods like this depend on if you can trick respondents in to telling th
 
 
 ---
-#### Example: Northern Spotted Owl
+### Stated preference methods
+.subheader[Example: Northern Spotted Owl]
 
 Endangered species in the Pacific Northwest (Example 4.2 in the textbook)
 
@@ -597,8 +609,6 @@ Example: mangrove swamps
 
 
 ---
-class: center, middle
-
 ### Mangrove swamp demonstration
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cNE56Wua7bA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
